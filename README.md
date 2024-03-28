@@ -12,7 +12,7 @@
   My <span>IELTS™</span>
 </h1>
 
-<h2>在线地址 <a href="https://hefengxian.github.io/my-ielts/#/">https://hefengxian.github.io/my-ielts/</a></h2>
+<h2>在线地址 <a href="https://mundi-xu.github.io/my-ielts/#/">https://mundi-xu.github.io/my-ielts</a></h2>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-home-dark.png">

@@ -54,10 +54,10 @@ const menus = reactive([
         </h1>
         <div class="mb-8 max-w-screen-md lg:mb-16">
           <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            我的 IELTS 备考中心
+            My IELTS Learning Centre
           </h2>
           <p class="text-gray-500 sm:text-xl dark:text-gray-400">
-            Hello, This is Frank. 这里包含我备考准备的一切，从词汇、语法开始...
+            Hello, This is Hanyin. Here lies everything I've prepared for my exam, starting with vocabulary, grammar...
           </p>
         </div>
         <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-12 space-y-8 md:space-y-0">

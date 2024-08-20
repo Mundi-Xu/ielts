@@ -28,7 +28,7 @@ const menus = reactive([
     label: '口语',
     icon: 'i-carbon-microphone',
     link: '/speaking',
-    desc: 'TODO 或许加入逻辑链相关内容',
+    desc: '利用ChatGPT4及Youtuber资源联系/TODO',
   },
   {
     label: '阅读',

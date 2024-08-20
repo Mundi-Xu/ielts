@@ -69,7 +69,7 @@ const showMobileMenu = ref(false)
         </div>
         <div class="flex items-center justify-between lg:order-2">
           <a
-            href="https://github.com/hefengxian/my-ielts"
+            href="https://github.com/Mundi-Xu/ielts"
             target="_blank"
             class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 dark:text-gray-400 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600"
           >

@@ -312,7 +312,7 @@ const sentences = [
   {
     no: 43,
     sentence: '家庭环境被认为是小孩成长最重要的影响因素',
-    translationFromBook: 'The family environment is widely thought/believed to be the most import influence on children\'s development',
+    translationFromBook: 'The family environment is widely thought/believed to be the most important influence on children\'s development',
     chatgpt: 'The family environment is considered the most crucial influencing factor in child\'s upbringing',
     remark: 'upbringing n. 抚养，养育；教育，教养',
   },
@@ -494,7 +494,7 @@ const sentences = [
   },
   {
     no: 68,
-    sentence: '转基因食品对健康的影响然然未知',
+    sentence: '转基因食品对健康的影响仍然未知',
     translationFromBook: 'The health effect of GE food remains unclear/yet to be known',
     chatgpt: 'The impact of genetically modified food on health remains uncertain',
     remark: 'GE=genetically engineered 也表示转基因和之前的 GM 一个意思',
@@ -582,7 +582,7 @@ const sentences = [
   },
   {
     no: 80,
-    sentence: '有时候，很难去评估人类行为照成的环境代价',
+    sentence: '有时候，很难去评估人类行为造成的环境代价',
     translationFromBook: 'Sometimes, it is difficult to evaluate the environmental cost of human activities',
     chatgpt: 'Sometimes, it is difficult to assess the environmental costs of human behavior',
     remark: 'behavior 不可数',
@@ -675,7 +675,7 @@ const sentences = [
   },
   {
     no: 91,
-    sentence: '现在很多人选择变的环并减少能源的使用，事实确实如此',
+    sentence: '现在很多人选择变得环保并减少能源的使用，事实确实如此',
     translationFromBook: 'It is true that many people today have chosen to go green and reduce cut down on the use of energy',
     chatgpt: 'It is true that many people are now choosing to be environmentally friendly and reduce their energy consumption',
     remark: '',

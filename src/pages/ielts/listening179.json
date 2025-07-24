@@ -5,7 +5,8 @@
     "type": "v.",
     "meaning": "预订",
     "replace": [
-      "book"
+      "book",
+      "make a reservation"
     ]
   },
   {
@@ -14,8 +15,9 @@
     "type": "",
     "meaning": "提前",
     "replace": [
-      "ahead",
-      "before"
+      "ahead of time",
+      "beforehand",
+      "earlier"
     ]
   },
   {
@@ -26,12 +28,11 @@
     "replace": [
       "must",
       "should",
-      "need",
-      "require",
-      "necessary",
+      "need to",
+      "be required to",
+      "be obliged to",
       "be supposed to",
-      "demand",
-      "order"
+      "be compelled to"
     ]
   },
   {
@@ -43,8 +44,9 @@
       "change",
       "alter",
       "modify",
-      "shift",
-      "revert"
+      "adapt",
+      "adjustment",
+      "shift"
     ]
   },
   {
@@ -53,10 +55,10 @@
     "type": "conj.",
     "meaning": "和",
     "replace": [
-      "and also",
       "as well as",
-      "with",
-      "in addition"
+      "together with",
+      "along with",
+      "in addition to"
     ]
   },
   {
@@ -67,7 +69,8 @@
     "replace": [
       "however",
       "yet",
-      "instead"
+      "nevertheless",
+      "on the other hand"
     ]
   },
   {
@@ -76,10 +79,10 @@
     "type": "conj.",
     "meaning": "因为",
     "replace": [
-      "why",
-      "as a result",
-      "therefore",
-      "cause"
+      "since",
+      "as",
+      "due to",
+      "owing to"
     ]
   },
   {
@@ -89,49 +92,50 @@
     "meaning": "多样性",
     "replace": [
       "a variety of",
-      "a number of",
       "a range of",
       "various",
-      "different"
+      "different",
+      "multiple",
+      "diverse"
     ]
   },
   {
     "index": 9,
     "word": "fee",
     "type": "n.",
-    "meaning": "费用，花销",
+    "meaning": "费用",
     "replace": [
-      "money",
       "cost",
-      "price",
-      "expense",
-      "budget",
-      "fund",
-      "financial",
-      "economic"
+      "charge",
+      "tuition",
+      "payment",
+      "fare"
     ]
   },
   {
     "index": 10,
     "word": "establish",
     "type": "v.",
-    "meaning": "建造",
+    "meaning": "建立",
     "replace": [
       "build",
       "create",
-      "construct",
       "set up",
-      "install"
+      "found",
+      "form",
+      "initiate"
     ]
   },
   {
     "index": 11,
     "word": "transfer",
     "type": "v.",
-    "meaning": "搬，移动",
+    "meaning": "搬迁，移动",
     "replace": [
       "move",
-      "relocate"
+      "relocate",
+      "shift",
+      "transport"
     ]
   },
   {
@@ -140,8 +144,10 @@
     "type": "n.",
     "meaning": "栖息地",
     "replace": [
-      "live",
-      "territory"
+      "living environment",
+      "natural environment",
+      "territory",
+      "ecosystem"
     ]
   },
   {
@@ -150,9 +156,10 @@
     "type": "adj.",
     "meaning": "国际的",
     "replace": [
-      "countries",
-      "continents",
-      "global"
+      "global",
+      "worldwide",
+      "multinational",
+      "cross-border"
     ]
   },
   {
@@ -162,7 +169,8 @@
     "meaning": "出口",
     "replace": [
       "abroad",
-      "overseas"
+      "overseas",
+      "send out"
     ]
   },
   {
@@ -171,10 +179,10 @@
     "type": "n.",
     "meaning": "植被",
     "replace": [
-      "plant",
-      "tree",
-      "forest",
-      "botanic"
+      "plants",
+      "flora",
+      "greenery",
+      "vegetation cover"
     ]
   },
   {
@@ -183,10 +191,10 @@
     "type": "n.",
     "meaning": "动物",
     "replace": [
-      "mammal",
-      "wildlife",
       "creature",
-      "species"
+      "species",
+      "fauna",
+      "living thing"
     ]
   },
   {
@@ -197,7 +205,8 @@
     "replace": [
       "characteristic",
       "trait",
-      "property"
+      "attribute",
+      "quality"
     ]
   },
   {
@@ -206,8 +215,9 @@
     "type": "v.",
     "meaning": "迁徙",
     "replace": [
-      "move",
-      "go away"
+      "migrate",
+      "move abroad",
+      "relocate"
     ]
   },
   {
@@ -216,8 +226,9 @@
     "type": "n.",
     "meaning": "食物",
     "replace": [
-      "feed on",
-      "eat"
+      "consume",
+      "ingest",
+      "nourishment"
     ]
   },
   {
@@ -226,7 +237,8 @@
     "type": "adj.",
     "meaning": "过敏的",
     "replace": [
-      "can't eat"
+      "sensitive to",
+      "intolerant of"
     ]
   },
   {
@@ -236,10 +248,9 @@
     "meaning": "健康",
     "replace": [
       "health",
-      "medical",
-      "sickness",
-      "illness",
-      "gym"
+      "well-being",
+      "physical condition",
+      "wellness"
     ]
   },
   {
@@ -250,8 +261,8 @@
     "replace": [
       "custom",
       "convention",
-      "local culture",
-      "lifestyle"
+      "practice",
+      "heritage"
     ]
   },
   {
@@ -459,10 +470,11 @@
     "type": "n.",
     "meaning": "地点",
     "replace": [
-      "where",
-      "spot",
       "location",
-      "area"
+      "site",
+      "venue",
+      "area",
+      "premises"
     ]
   },
   {
@@ -471,8 +483,9 @@
     "type": "adj.",
     "meaning": "附近的",
     "replace": [
-      "close",
-      "not far from",
+      "close to",
+      "adjacent to",
+      "in the vicinity of",
       "nearby"
     ]
   },
@@ -483,7 +496,9 @@
     "meaning": "偏远的",
     "replace": [
       "isolated",
-      "distant"
+      "distant",
+      "far away",
+      "outlying"
     ]
   },
   {
@@ -493,8 +508,9 @@
     "meaning": "优点",
     "replace": [
       "benefit",
-      "positive",
-      "good thing",
+      "merit",
+      "asset",
+      "plus",
       "strength"
     ]
   },
@@ -506,8 +522,9 @@
     "replace": [
       "drawback",
       "shortcoming",
-      "negative",
-      "problem"
+      "downside",
+      "weakness",
+      "flaw"
     ]
   },
   {
@@ -516,9 +533,10 @@
     "type": "n.",
     "meaning": "教育",
     "replace": [
-      "schools",
-      "colleges",
-      "institution"
+      "school",
+      "college",
+      "academy",
+      "educational institution"
     ]
   },
   {
@@ -527,10 +545,10 @@
     "type": "",
     "meaning": "公众",
     "replace": [
-      "people",
-      "inhabitants",
       "the public",
-      "men and women"
+      "citizens",
+      "residents",
+      "general public"
     ]
   },
   {
@@ -540,6 +558,7 @@
     "meaning": "学生",
     "replace": [
       "pupil",
+      "learner",
       "undergraduate",
       "postgraduate"
     ]
@@ -552,8 +571,9 @@
     "replace": [
       "aim",
       "goal",
-      "target",
-      "key areas"
+      "objective",
+      "intention",
+      "target"
     ]
   },
   {
@@ -563,8 +583,9 @@
     "meaning": "学习",
     "replace": [
       "acquire",
-      "get",
-      "obtain"
+      "pick up",
+      "master",
+      "grasp"
     ]
   },
   {
@@ -574,7 +595,9 @@
     "meaning": "结构大纲",
     "replace": [
       "outline",
-      "framework"
+      "framework",
+      "structure",
+      "skeleton"
     ]
   },
   {
@@ -584,8 +607,9 @@
     "meaning": "参考资料",
     "replace": [
       "books",
-      "journals",
-      "magazines"
+      "references",
+      "sources",
+      "reading materials"
     ]
   },
   {
@@ -595,8 +619,9 @@
     "meaning": "广泛",
     "replace": [
       "comprehensive",
-      "a lot of",
-      "many"
+      "broad",
+      "wide-ranging",
+      "abundant"
     ]
   },
   {
@@ -606,7 +631,9 @@
     "meaning": "能力，专长",
     "replace": [
       "ability",
-      "skill"
+      "skill",
+      "proficiency",
+      "competence"
     ]
   },
   {
@@ -615,7 +642,9 @@
     "type": "n.",
     "meaning": "团队",
     "replace": [
-      "team"
+      "team",
+      "group of people",
+      "collective"
     ]
   },
   {
@@ -624,9 +653,10 @@
     "type": "v.",
     "meaning": "与……相关",
     "replace": [
-      "relateto",
+      "relate to",
       "connect",
-      "link"
+      "link",
+      "be associated with"
     ]
   },
   {
@@ -635,9 +665,10 @@
     "type": "n.",
     "meaning": "方法",
     "replace": [
-      "way",
-      "how",
-      "method"
+      "method",
+      "means",
+      "approach",
+      "strategy"
     ]
   },
   {
@@ -647,10 +678,10 @@
     "meaning": "鼓励，促进",
     "replace": [
       "encourage",
+      "inspire",
       "stimulate",
-      "keep active",
-      "boost",
-      "help"
+      "spur",
+      "drive"
     ]
   },
   {
@@ -660,7 +691,9 @@
     "meaning": "提升",
     "replace": [
       "develop",
-      "promote"
+      "enhance",
+      "advance",
+      "upgrade"
     ]
   },
   {
@@ -670,7 +703,8 @@
     "meaning": "低估",
     "replace": [
       "underestimate",
-      "neglect"
+      "overlook",
+      "ignore"
     ]
   },
   {
@@ -679,8 +713,9 @@
     "type": "v.",
     "meaning": "省掉",
     "replace": [
-      "leaveout",
-      "cancel"
+      "leave out",
+      "omit",
+      "exclude"
     ]
   },
   {
@@ -692,8 +727,8 @@
       "discover",
       "detect",
       "spot",
-      "see",
-      "sight"
+      "identify",
+      "recognize"
     ]
   },
   {
@@ -703,8 +738,8 @@
     "meaning": "机会",
     "replace": [
       "chance",
-      "odds",
-      "hope"
+      "possibility",
+      "opening"
     ]
   },
   {
@@ -713,10 +748,10 @@
     "type": "adj.",
     "meaning": "困难的",
     "replace": [
-      "problem",
       "hard",
-      "not easy",
-      "not simple"
+      "challenging",
+      "tough",
+      "demanding"
     ]
   },
   {
@@ -727,9 +762,8 @@
     "replace": [
       "avoid",
       "stop",
-      "escape",
-      "forbid",
-      "out of bounds"
+      "prevent",
+      "block"
     ]
   },
   {
@@ -738,10 +772,10 @@
     "type": "v.",
     "meaning": "理解错误",
     "replace": [
-      "wrongidea",
+      "misinterpret",
       "confuse",
-      "puzzle",
-      "perplex"
+      "misread",
+      "get wrong"
     ]
   },
   {
@@ -750,9 +784,10 @@
     "type": "",
     "meaning": "努力",
     "replace": [
-      "make",
-      "efforts",
-      "hard working"
+      "make an effort",
+      "strive",
+      "endeavour",
+      "work hard"
     ]
   },
   {
@@ -763,7 +798,8 @@
     "replace": [
       "response",
       "reaction",
-      "reply"
+      "comment",
+      "input"
     ]
   },
   {
@@ -772,9 +808,10 @@
     "type": "v.",
     "meaning": "影响",
     "replace": [
-      "impact",
       "influence",
-      "effect"
+      "impact",
+      "shape",
+      "affect"
     ]
   },
   {
@@ -783,10 +820,10 @@
     "type": "n.",
     "meaning": "分析，认知",
     "replace": [
-      "perspective",
-      "understand",
-      "perceive",
-      "know"
+      "examination",
+      "evaluation",
+      "assessment",
+      "review"
     ]
   },
   {
@@ -797,7 +834,8 @@
     "replace": [
       "outcome",
       "consequence",
-      "conclusion"
+      "result",
+      "finding"
     ]
   },
   {
@@ -806,11 +844,10 @@
     "type": "v.",
     "meaning": "处理",
     "replace": [
-      "dealwith",
+      "deal with",
       "cope with",
-      "figure out",
-      "work out",
-      "take care of"
+      "manage",
+      "handle"
     ]
   },
   {
@@ -822,7 +859,7 @@
       "help",
       "assistance",
       "aid",
-      "tip"
+      "support"
     ]
   },
   {
@@ -831,7 +868,9 @@
     "type": "adj.",
     "meaning": "完美的",
     "replace": [
-      "perfect"
+      "perfect",
+      "optimal",
+      "ideal"
     ]
   },
   {
@@ -841,7 +880,8 @@
     "meaning": "严格的",
     "replace": [
       "strict",
-      "demanding"
+      "harsh",
+      "stringent"
     ]
   },
   {
@@ -851,7 +891,8 @@
     "meaning": "限制",
     "replace": [
       "limit",
-      "not permit"
+      "restrict",
+      "confine"
     ]
   },
   {
@@ -860,8 +901,9 @@
     "type": "adj.",
     "meaning": "相似的",
     "replace": [
-      "like",
-      "compare"
+      "alike",
+      "comparable",
+      "resemble"
     ]
   },
   {
@@ -871,8 +913,8 @@
     "meaning": "特别的",
     "replace": [
       "special",
-      "in particular",
-      "especially"
+      "notable",
+      "distinctive"
     ]
   },
   {
@@ -881,8 +923,9 @@
     "type": "v.",
     "meaning": "重复",
     "replace": [
-      "repeat",
-      "reproduce"
+      "duplicate",
+      "imitate",
+      "replicate"
     ]
   },
   {
@@ -892,7 +935,8 @@
     "meaning": "统计学",
     "replace": [
       "data",
-      "figure"
+      "figures",
+      "statistics"
     ]
   },
   {
@@ -901,7 +945,8 @@
     "type": "n.",
     "meaning": "最大值",
     "replace": [
-      "upto",
+      "maximum",
+      "up to",
       "at most"
     ]
   },
@@ -911,7 +956,8 @@
     "type": "n.",
     "meaning": "最小值",
     "replace": [
-      "atleast"
+      "minimum",
+      "at least"
     ]
   },
   {
@@ -920,11 +966,10 @@
     "type": "adj.",
     "meaning": "最初的，开始的",
     "replace": [
-      "atfirst",
-      "start",
-      "begin",
-      "early on",
-      "premiere"
+      "initially",
+      "at first",
+      "beginning",
+      "commence"
     ]
   },
   {
@@ -933,12 +978,10 @@
     "type": "adj.",
     "meaning": "少量的",
     "replace": [
-      "justafew",
-      "a little",
-      "small",
-      "a small number of",
-      "not many",
-      "miniature"
+      "limited",
+      "few",
+      "scarce",
+      "minor"
     ]
   },
   {
@@ -947,7 +990,9 @@
     "type": "v.",
     "meaning": "截短",
     "replace": [
-      "cutdown"
+      "shorten",
+      "reduce",
+      "trim"
     ]
   },
   {
@@ -956,12 +1001,10 @@
     "type": "v.",
     "meaning": "降低",
     "replace": [
-      "lower",
       "reduce",
-      "fewer",
-      "drop",
-      "fall",
-      "decrease"
+      "decline",
+      "diminish",
+      "lessen"
     ]
   },
   {
@@ -971,9 +1014,8 @@
     "meaning": "缺乏",
     "replace": [
       "shortage",
-      "insufficient",
-      "fewer",
-      "not enough"
+      "deficiency",
+      "insufficiency"
     ]
   },
   {
@@ -982,8 +1024,10 @@
     "type": "adj.",
     "meaning": "大的",
     "replace": [
-      "big",
-      "huge"
+      "huge",
+      "enormous",
+      "massive",
+      "substantial"
     ]
   },
   {
@@ -992,9 +1036,9 @@
     "type": "",
     "meaning": "大量",
     "replace": [
-      "lots of",
-      "large quantities of",
-      "loads of"
+      "a great deal of",
+      "plenty of",
+      "numerous"
     ]
   },
   {
@@ -1003,7 +1047,9 @@
     "type": "n.",
     "meaning": "绝大部分",
     "replace": [
-      "most"
+      "the majority",
+      "most",
+      "the greater part"
     ]
   },
   {
@@ -1012,7 +1058,8 @@
     "type": "v.",
     "meaning": "两倍",
     "replace": [
-      "twice"
+      "double",
+      "twofold"
     ]
   },
   {
@@ -1022,9 +1069,8 @@
     "meaning": "超过",
     "replace": [
       "over",
-      "beyond",
       "exceed",
-      "above"
+      "surpass"
     ]
   },
   {
@@ -1033,10 +1079,9 @@
     "type": "",
     "meaning": "当前",
     "replace": [
-      "already",
-      "existing",
       "currently",
-      "nowadays"
+      "at present",
+      "now"
     ]
   },
   {
@@ -1046,9 +1091,8 @@
     "meaning": "更新",
     "replace": [
       "upgrade",
-      "up to date",
-      "more current",
-      "modern"
+      "refresh",
+      "renew"
     ]
   },
   {
@@ -1057,7 +1101,8 @@
     "type": "adj.",
     "meaning": "最新的",
     "replace": [
-      "latest"
+      "latest",
+      "most recent"
     ]
   },
   {
@@ -1066,8 +1111,9 @@
     "type": "adv.",
     "meaning": "将来",
     "replace": [
-      "later",
-      "in the future"
+      "soon",
+      "shortly",
+      "before long"
     ]
   },
   {
@@ -1076,8 +1122,8 @@
     "type": "",
     "meaning": "过时的",
     "replace": [
-      "old",
-      "fashioned"
+      "outdated",
+      "obsolete"
     ]
   },
   {
@@ -1086,12 +1132,9 @@
     "type": "adj.",
     "meaning": "古老的，过去的",
     "replace": [
-      "medieval",
-      "in the past",
-      "once",
+      "ancient",
       "historical",
       "old",
-      "ancient",
       "former"
     ]
   },
@@ -1101,7 +1144,9 @@
     "type": "adj.",
     "meaning": "暂时的",
     "replace": [
-      "ashorttime"
+      "temporary",
+      "brief",
+      "short-term"
     ]
   },
   {
@@ -1110,8 +1155,9 @@
     "type": "n.",
     "meaning": "截止时间",
     "replace": [
-      "timepressure",
-      "on time"
+      "deadline",
+      "due date",
+      "cut-off date"
     ]
   },
   {
@@ -1120,7 +1166,9 @@
     "type": "adj.",
     "meaning": "长久的",
     "replace": [
-      "long-lasting"
+      "permanent",
+      "enduring",
+      "lasting"
     ]
   },
   {
@@ -1138,7 +1186,9 @@
     "type": "adj.",
     "meaning": "年度的",
     "replace": [
-      "everyyear"
+      "yearly",
+      "once a year",
+      "per annum"
     ]
   },
   {
@@ -1148,7 +1198,7 @@
     "meaning": "每个月",
     "replace": [
       "monthly",
-      "four weeks"
+      "each month"
     ]
   },
   {
@@ -1157,7 +1207,8 @@
     "type": "",
     "meaning": "每天",
     "replace": [
-      "daily"
+      "every day",
+      "on a daily basis"
     ]
   },
   {
@@ -1166,10 +1217,10 @@
     "type": "v.",
     "meaning": "分类",
     "replace": [
-      "category",
+      "categorize",
       "sort",
-      "type",
-      "kind"
+      "group",
+      "arrange"
     ]
   },
   {
@@ -1178,9 +1229,9 @@
     "type": "n.",
     "meaning": "入口",
     "replace": [
-      "access",
-      "main gate",
-      "door"
+      "entry",
+      "gateway",
+      "doorway"
     ]
   },
   {
@@ -1189,8 +1240,8 @@
     "type": "prep.",
     "meaning": "在……后面",
     "replace": [
-      "back",
-      "rear"
+      "at the back",
+      "in the rear"
     ]
   },
   {
@@ -1199,7 +1250,8 @@
     "type": "prep.",
     "meaning": "在……下面",
     "replace": [
-      "under"
+      "beneath",
+      "underneath"
     ]
   },
   {
@@ -1208,9 +1260,9 @@
     "type": "prep.",
     "meaning": "在……旁边",
     "replace": [
-      "nextto",
-      "near",
-      "border"
+      "next to",
+      "beside",
+      "by the side of"
     ]
   },
   {
@@ -1219,10 +1271,9 @@
     "type": "adj.",
     "meaning": "可用的",
     "replace": [
-      "have",
       "accessible",
-      "not close",
-      "open"
+      "obtainable",
+      "on hand"
     ]
   },
   {
@@ -1231,8 +1282,9 @@
     "type": "adj.",
     "meaning": "无趣的",
     "replace": [
-      "notinteresting",
-      "boredom"
+      "dull",
+      "tedious",
+      "uninteresting"
     ]
   },
   {
@@ -1241,9 +1293,9 @@
     "type": "n.",
     "meaning": "倾向",
     "replace": [
-      "possibility",
-      "likely",
-      "tendency"
+      "tendency",
+      "pattern",
+      "direction"
     ]
   },
   {
@@ -1253,8 +1305,8 @@
     "meaning": "危险的",
     "replace": [
       "dangerous",
-      "not safe",
-      "hazard"
+      "unsafe",
+      "hazardous"
     ]
   },
   {
@@ -1264,7 +1316,8 @@
     "meaning": "有毒的",
     "replace": [
       "toxic",
-      "dangerous"
+      "venomous",
+      "harmful"
     ]
   },
   {
@@ -1273,8 +1326,9 @@
     "type": "n.",
     "meaning": "警报",
     "replace": [
-      "alarm",
-      "alert"
+      "alert",
+      "caution",
+      "notice"
     ]
   },
   {
@@ -1283,7 +1337,8 @@
     "type": "v.",
     "meaning": "谨慎",
     "replace": [
-      "caution"
+      "be careful",
+      "take care"
     ]
   },
   {
@@ -1292,7 +1347,8 @@
     "type": "v.",
     "meaning": "偷窃",
     "replace": [
-      "theft"
+      "rob",
+      "burgle"
     ]
   },
   {
@@ -1301,9 +1357,9 @@
     "type": "v.",
     "meaning": "保护",
     "replace": [
-      "safeguard",
-      "shelter",
-      "preserve"
+      "defend",
+      "guard",
+      "shield"
     ]
   },
   {
@@ -1312,11 +1368,9 @@
     "type": "n.",
     "meaning": "伤害",
     "replace": [
-      "harm",
-      "hurt",
-      "damage",
-      "dangerous",
-      "frighten"
+      "wound",
+      "trauma",
+      "bruise"
     ]
   },
   {
@@ -1325,9 +1379,9 @@
     "type": "adj.",
     "meaning": "军事的",
     "replace": [
-      "battle",
-      "weapon",
-      "not peaceful"
+      "army",
+      "armed forces",
+      "defence"
     ]
   },
   {
@@ -1337,7 +1391,8 @@
     "meaning": "策略",
     "replace": [
       "strategy",
-      "method"
+      "plan",
+      "approach"
     ]
   },
   {
@@ -1347,7 +1402,7 @@
     "meaning": "依靠",
     "replace": [
       "depend on",
-      "count on"
+      "rely upon"
     ]
   },
   {
@@ -1356,10 +1411,9 @@
     "type": "n.",
     "meaning": "旅行",
     "replace": [
-      "tourism",
-      "trip",
-      "passenger",
-      "flight"
+      "journey",
+      "tour",
+      "excursion"
     ]
   },
   {
@@ -1368,9 +1422,9 @@
     "type": "",
     "meaning": "空间旅行",
     "replace": [
-      "aircraft",
-      "rocket",
-      "satellite"
+      "spaceship",
+      "shuttle",
+      "rocket"
     ]
   },
   {
@@ -1380,12 +1434,8 @@
     "meaning": "交通",
     "replace": [
       "vehicle",
-      "bus",
-      "train",
-      "boat",
-      "ship",
-      "ferry",
-      "subway"
+      "transportation",
+      "means of transport"
     ]
   },
   {
@@ -1394,9 +1444,9 @@
     "type": "adj.",
     "meaning": "具体的",
     "replace": [
-      "detail",
-      "particular",
-      "example"
+      "precise",
+      "explicit",
+      "detailed"
     ]
   },
   {
@@ -1405,8 +1455,9 @@
     "type": "v.",
     "meaning": "询问",
     "replace": [
-      "askfor",
-      "inquiry"
+      "ask for",
+      "request",
+      "enquire"
     ]
   },
   {
@@ -1415,7 +1466,9 @@
     "type": "adj.",
     "meaning": "清晰地",
     "replace": [
-      "definitive"
+      "clear",
+      "obvious",
+      "evident"
     ]
   },
   {
@@ -1424,10 +1477,9 @@
     "type": "v.",
     "meaning": "结冰",
     "replace": [
-      "froze",
-      "ice",
-      "chill",
-      "cold"
+      "ice over",
+      "solidify",
+      "turn to ice"
     ]
   },
   {
@@ -1436,9 +1488,9 @@
     "type": "n.",
     "meaning": "公司",
     "replace": [
-      "business",
       "company",
-      "corporation structure"
+      "enterprise",
+      "firm"
     ]
   },
   {
@@ -1448,7 +1500,8 @@
     "meaning": "组织，安排",
     "replace": [
       "arrange",
-      "plan"
+      "set up",
+      "organise"
     ]
   },
   {
@@ -1457,8 +1510,9 @@
     "type": "v.",
     "meaning": "产生",
     "replace": [
-      "generate",
-      "make"
+      "create",
+      "manufacture",
+      "yield"
     ]
   },
   {
@@ -1467,7 +1521,8 @@
     "type": "v.",
     "meaning": "管理，治理",
     "replace": [
-      "manage"
+      "administer",
+      "supervise"
     ]
   },
   {
@@ -1477,7 +1532,8 @@
     "meaning": "职位",
     "replace": [
       "profession",
-      "job"
+      "occupation",
+      "career"
     ]
   },
   {
@@ -1486,7 +1542,8 @@
     "type": "",
     "meaning": "所有年龄的人",
     "replace": [
-      "young and old"
+      "all generations",
+      "all age groups"
     ]
   },
   {
@@ -1495,10 +1552,9 @@
     "type": "n.",
     "meaning": "年轻",
     "replace": [
-      "young",
-      "boy",
-      "child",
-      "teenager"
+      "adolescent",
+      "teenager",
+      "juvenile"
     ]
   },
   {
@@ -1507,8 +1563,9 @@
     "type": "n.",
     "meaning": "伙伴",
     "replace": [
-      "friend",
-      "peer"
+      "companion",
+      "partner",
+      "colleague"
     ]
   },
   {
@@ -1517,9 +1574,9 @@
     "type": "n.",
     "meaning": "员工",
     "replace": [
-      "recruit",
-      "worker",
-      "employee"
+      "employee",
+      "staff member",
+      "personnel"
     ]
   },
   {
@@ -1528,7 +1585,8 @@
     "type": "v.",
     "meaning": "销售",
     "replace": [
-      "retail"
+      "sell",
+      "trade"
     ]
   },
   {
@@ -1537,7 +1595,8 @@
     "type": "adj.",
     "meaning": "便宜的",
     "replace": [
-      "lowprice"
+      "inexpensive",
+      "affordable"
     ]
   },
   {
@@ -1546,8 +1605,8 @@
     "type": "n.",
     "meaning": "打折",
     "replace": [
-      "10%off",
-      "on sale"
+      "price reduction",
+      "special offer"
     ]
   },
   {
@@ -1556,8 +1615,8 @@
     "type": "n.",
     "meaning": "圆",
     "replace": [
-      "curve",
-      "circle"
+      "circular",
+      "curved"
     ]
   },
   {
@@ -1566,7 +1625,8 @@
     "type": "n.",
     "meaning": "顺序",
     "replace": [
-      "sequence"
+      "sequence",
+      "arrangement"
     ]
   },
   {
@@ -1575,8 +1635,8 @@
     "type": "v.",
     "meaning": "修理；翻新",
     "replace": [
-      "fix",
-      "repair"
+      "restore",
+      "refurbish"
     ]
   },
   {
@@ -1585,8 +1645,8 @@
     "type": "adj.",
     "meaning": "单独的",
     "replace": [
-      "single",
-      "by themselves"
+      "solitary",
+      "on one's own"
     ]
   },
   {
@@ -1595,8 +1655,8 @@
     "type": "n.",
     "meaning": "招待",
     "replace": [
-      "treatment",
-      "prepare refreshment"
+      "reception",
+      "warmth"
     ]
   },
   {
@@ -1605,8 +1665,8 @@
     "type": "",
     "meaning": "像",
     "replace": [
-      "look like",
-      "seem"
+      "resemble",
+      "be similar to"
     ]
   },
   {
@@ -1615,10 +1675,9 @@
     "type": "v.",
     "meaning": "失望，使沮丧",
     "replace": [
-      "disappoint",
-      "dispirit",
-      "frustrate",
-      "discourage"
+      "discourage",
+      "upset",
+      "let down"
     ]
   },
   {
@@ -1627,8 +1686,8 @@
     "type": "adj.",
     "meaning": "有名的",
     "replace": [
-      "famous",
-      "fame"
+      "renowned",
+      "noted"
     ]
   },
   {
@@ -1637,9 +1696,8 @@
     "type": "",
     "meaning": "专注于",
     "replace": [
-      "focus",
-      "emphasis",
-      "concentrate"
+      "be expert in",
+      "be skilled at"
     ]
   },
   {
@@ -1648,12 +1706,9 @@
     "type": "n.",
     "meaning": "部分",
     "replace": [
-      "component",
-      "proportion",
-      "percent",
       "section",
-      "element",
-      "ingredient"
+      "segment",
+      "portion"
     ]
   },
   {
@@ -1662,9 +1717,9 @@
     "type": "adj.",
     "meaning": "典型的；普通的",
     "replace": [
-      "representative",
-      "common",
-      "average"
+      "standard",
+      "usual",
+      "mainstream"
     ]
   },
   {
@@ -1673,10 +1728,9 @@
     "type": "adj.",
     "meaning": "特别的",
     "replace": [
-      "special",
-      "unique",
-      "unusual",
-      "rare"
+      "exceptional",
+      "rare",
+      "uncommon"
     ]
   },
   {
@@ -1685,7 +1739,8 @@
     "type": "adv.",
     "meaning": "精确地",
     "replace": [
-      "precisely"
+      "exactly",
+      "correctly"
     ]
   },
   {
@@ -1694,9 +1749,9 @@
     "type": "v.",
     "meaning": "扩建；扩张",
     "replace": [
-      "add",
       "enlarge",
-      "increase spaces"
+      "extend",
+      "broaden"
     ]
   },
   {
@@ -1705,8 +1760,9 @@
     "type": "v.",
     "meaning": "上升",
     "replace": [
-      "goup",
-      "increase"
+      "rise",
+      "go up",
+      "ascend"
     ]
   },
   {
@@ -1715,8 +1771,8 @@
     "type": "v.",
     "meaning": "增强",
     "replace": [
-      "improve",
-      "increase"
+      "strengthen",
+      "boost"
     ]
   },
   {
@@ -1725,8 +1781,8 @@
     "type": "n.",
     "meaning": "力量",
     "replace": [
-      "force",
-      "energy"
+      "strength",
+      "might"
     ]
   },
   {
@@ -1735,10 +1791,9 @@
     "type": "n.",
     "meaning": "燃料",
     "replace": [
-      "coal",
-      "firewood",
       "petrol",
-      "gas"
+      "diesel",
+      "gasoline"
     ]
   },
   {
@@ -1747,7 +1802,8 @@
     "type": "v.",
     "meaning": "重新装修",
     "replace": [
-      "redecorate"
+      "renovate",
+      "restore"
     ]
   },
   {
@@ -1756,7 +1812,7 @@
     "type": "n.",
     "meaning": "偏爱；优先权",
     "replace": [
-      "like",
+      "favour",
       "priority"
     ]
   },
@@ -1766,8 +1822,8 @@
     "type": "v.",
     "meaning": "信任",
     "replace": [
-      "less suspicious",
-      "believe"
+      "have confidence in",
+      "rely on"
     ]
   },
   {
@@ -1776,7 +1832,8 @@
     "type": "n.",
     "meaning": "电脑",
     "replace": [
-      "laptop"
+      "PC",
+      "desktop"
     ]
   },
   {
@@ -1785,7 +1842,8 @@
     "type": "adj.",
     "meaning": "方便的",
     "replace": [
-      "convenient"
+      "useful",
+      "practical"
     ]
   },
   {
@@ -1794,9 +1852,9 @@
     "type": "v.",
     "meaning": "展示",
     "replace": [
-      "display",
       "show",
-      "exhibition"
+      "present",
+      "illustrate"
     ]
   },
   {
@@ -1805,10 +1863,9 @@
     "type": "adj.",
     "meaning": "主要的",
     "replace": [
-      "significant",
-      "major",
-      "main",
-      "primary"
+      "crucial",
+      "vital",
+      "essential"
     ]
   },
   {
@@ -1817,9 +1874,8 @@
     "type": "adj.",
     "meaning": "简单直接的",
     "replace": [
-      "direct",
-      "first-hand",
-      "simple"
+      "simple",
+      "uncomplicated"
     ]
   },
   {
@@ -1828,8 +1884,8 @@
     "type": "adj.",
     "meaning": "废弃的",
     "replace": [
-      "empty",
-      "abandoned"
+      "unused",
+      "derelict"
     ]
   },
   {
@@ -1838,8 +1894,8 @@
     "type": "v.",
     "meaning": "捐赠",
     "replace": [
-      "charity",
-      "give"
+      "contribute",
+      "present"
     ]
   },
   {
@@ -1848,7 +1904,8 @@
     "type": "n.",
     "meaning": "作品",
     "replace": [
-      "item"
+      "piece",
+      "creation"
     ]
   },
   {
@@ -1857,7 +1914,8 @@
     "type": "v.",
     "meaning": "转动",
     "replace": [
-      "switch"
+      "rotate",
+      "spin"
     ]
   },
   {
@@ -1866,10 +1924,9 @@
     "type": "n.",
     "meaning": "信息",
     "replace": [
-      "details",
-      "data",
-      "graph",
-      "chart"
+      "facts",
+      "figures",
+      "statistics"
     ]
   },
   {
@@ -1878,7 +1935,8 @@
     "type": "v.",
     "meaning": "想象",
     "replace": [
-      "imagine"
+      "picture",
+      "envision"
     ]
   },
   {
@@ -1887,7 +1945,8 @@
     "type": "n.",
     "meaning": "重复",
     "replace": [
-      "over and over"
+      "reiteration",
+      "recurrence"
     ]
   },
   {
@@ -1896,7 +1955,8 @@
     "type": "adj.",
     "meaning": "弱的",
     "replace": [
-      "weak"
+      "inferior",
+      "feeble"
     ]
   },
   {
@@ -1905,8 +1965,8 @@
     "type": "adj.",
     "meaning": "耐用的",
     "replace": [
-      "stronger",
-      "longer"
+      "sturdy",
+      "long-lasting"
     ]
   },
   {
@@ -1915,6 +1975,7 @@
     "type": "n.",
     "meaning": "污染物",
     "replace": [
+      "toxin",
       "contaminant"
     ]
   },
@@ -1924,9 +1985,9 @@
     "type": "v.",
     "meaning": "继续",
     "replace": [
-      "ahead",
-      "go on",
-      "keep doing"
+      "carry on",
+      "proceed",
+      "persist"
     ]
   }
 ]

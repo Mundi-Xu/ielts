@@ -10,13 +10,13 @@ const ws = reactive(words.map((v) => {
     },
     result: {
       checked: false,
-      errorWords: [],
+      errorWords: [] as string[],
     },
   }
   return item
 }))
 
-function onKeydown(e, word) {
+function onKeydown(e: KeyboardEvent, word: string) {
   if (e.key === '`') {
     e.preventDefault()
     play(word)

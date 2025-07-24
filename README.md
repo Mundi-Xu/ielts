@@ -12,13 +12,7 @@
   My <span>IELTS™</span>
 </h1>
 
-<h2>在线地址 <a href="https://mundi-xu.github.io/my-ielts/#/">https://mundi-xu.github.io/my-ielts</a></h2>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-home-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="public/screenshot/screenshot-home-light.png">
-  <img alt="Home" src="public/screenshot/screenshot-home-light.png">
-</picture>
+<h2>在线地址 <a href="https://mundi-xu.github.io/ielts/">https://mundi-xu.github.io/ielts</a></h2>
 
 
 ## 概述

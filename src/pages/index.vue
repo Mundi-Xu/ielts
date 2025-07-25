@@ -1,11 +1,19 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import { RouterLink } from 'vue-router'
+import { reactive } from 'vue'
 
 defineOptions({
   name: 'IndexPage',
 })
 
-const menus = reactive([
+interface MenuItem {
+  label: string
+  icon: string
+  link: string
+  desc: string
+}
+
+const menus = reactive<MenuItem[]>([
   {
     label: '词汇',
     icon: 'i-carbon-chart-histogram',
@@ -28,7 +36,7 @@ const menus = reactive([
     label: '口语',
     icon: 'i-carbon-microphone',
     link: '/speaking',
-    desc: '利用ChatGPT4及Youtuber资源练习',
+    desc: '口语练习指导和话题练习题',
   },
   {
     label: '阅读',

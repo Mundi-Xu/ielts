@@ -4,6 +4,12 @@
   flex-direction: column;
 }
 
+/* 暗色模式优化 */
+.dark {
+  color-scheme: dark;
+}
+
+/* 词汇分组颜色 */
 .group-color-10 {
     border-left: 8px solid #c5e4d4;
 }
@@ -19,7 +25,6 @@
 .group-color-14 {
     border-left: 8px solid #c7cde7;
 }
-
 
 .group-color-0 {
     border-left: 8px solid #E63946;
@@ -51,4 +56,63 @@
 }
 .group-color-9 {
     border-left: 8px solid #eaac8b;
+}
+
+/* 表格优化 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark th, .dark td {
+  border-color: #374151;
+}
+
+/* 链接样式优化 */
+a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.dark a {
+  color: #60a5fa;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 按钮样式优化 */
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* 输入框样式优化 */
+input[type="text"], 
+input[type="search"], 
+select {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus, 
+input[type="search"]:focus, 
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.dark input[type="text"]:focus, 
+.dark input[type="search"]:focus, 
+.dark select:focus {
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.3);
 }

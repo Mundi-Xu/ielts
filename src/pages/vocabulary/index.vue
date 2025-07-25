@@ -1,5 +1,6 @@
-<!-- eslint-disable eslint-comments/no-unlimited-disable -->
-<script setup generic="T extends any, O extends any">
+<script setup lang="ts" generic="T extends any, O extends any">
+import { ref, reactive, watch, onMounted, onUpdated } from 'vue'
+import type { VocabularyData, VocabularyItem } from '~/types/vocabulary'
 import vocabulary from './vocabulary'
 
 const CHAPTER_KEY = 'vocabulary_chapter'
@@ -12,42 +13,13 @@ const isFinishTraining = ref(false)
 const isShowSource = ref(false)
 
 const trainingStats = ref('')
-const keyword = ref('')
 const chapters = Object.keys(vocabulary)
 const category = ref(localStorage.getItem(CHAPTER_KEY) || chapters[0])
 
 const loaded = ref(false)
-const refVocabulary = reactive(vocabulary)
-const wordList = computed(() => {
-  const result = structuredClone(vocabulary) // deep clone
-  // const keywordValue = keyword.value.trim().toLowerCase()
-  const categoryValue = category.value
+const refVocabulary = reactive(vocabulary as VocabularyData)
 
-  if (categoryValue !== '') {
-    // for (const key in result) {
-    //   if (key !== categoryValue)
-    //     delete result[key]
-    // }
-    return { [categoryValue]: result[categoryValue] }
-  }
-
-  /* if (keywordValue !== '') {
-    for (const key in result) {
-      const category = result[key]
-      const words = []
-      category.words.forEach((group) => {
-        words.push(group.filter((item) => {
-          return item.word.toLowerCase().includes(keywordValue)
-        }))
-      })
-      category.words = words
-    }
-  } */
-  return {}
-})
-
-watch(category, (newVal, oldVal) => {
-  // console.log(newVal, oldVal)
+watch(category, (newVal) => {
   localStorage.setItem(CHAPTER_KEY, newVal)
 })
 
@@ -78,9 +50,9 @@ onMounted(() => {
 
   // 只能同时播放一个音频
   const audioTags = document.getElementsByTagName('audio')
-  for (const audio of audioTags) {
+  for (const audio of Array.from(audioTags)) {
     audio.onplay = () => {
-      for (const _audio of audioTags) {
+      for (const _audio of Array.from(audioTags)) {
         _audio.blur()
         if (audio !== _audio)
           _audio.pause()
@@ -91,11 +63,12 @@ onMounted(() => {
 
 onUpdated(() => {
   // 音频再切换 SRC 之后需要调用一下 load() 不然看不到效果
-  for (const el of document.getElementsByTagName('audio'))
+  const audioElements = document.getElementsByTagName('audio')
+  for (const el of Array.from(audioElements))
     el.load()
 })
 
-document.addEventListener('keydown', (ev) => {
+document.addEventListener('keydown', (ev: KeyboardEvent) => {
   // 激活的那个音频可以通过方向键进行快进/退
   if (['ArrowLeft', 'ArrowRight', ' '].includes(ev.key)) {
     ev.preventDefault()
@@ -104,12 +77,11 @@ document.addEventListener('keydown', (ev) => {
       ArrowLeft: -5,
       ArrowRight: 5,
     }
-    for (const audioTag of audioTags) {
+    for (const audioTag of Array.from(audioTags)) {
       audioTag.blur()
-      if (keyMap[ev.key]) {
-        const step = keyMap[ev.key]
+      if (keyMap[ev.key as keyof typeof keyMap]) {
+        const step = keyMap[ev.key as keyof typeof keyMap]
         audioTag.currentTime = audioTag.currentTime + step
-        // console.log(step, audioT ag.currentTime)
       }
       if (ev.key === ' ') {
         if (audioTag.paused)
@@ -121,8 +93,8 @@ document.addEventListener('keydown', (ev) => {
   }
 })
 
-let audio = null
-function play(audioPath) {
+let audio: HTMLAudioElement | null = null
+function play(audioPath: string) {
   if (audio) {
     audio.pause()
     audio.currentTime = 0
@@ -132,28 +104,28 @@ function play(audioPath) {
   audio.play()
 }
 
-function copyText(item) {
-  const text = `${item.word} ${item.pos} ${item.meaning}`
+function copyText(item: VocabularyItem) {
+  const text = `${item.word.join(' ')} ${item.pos} ${item.meaning}`
   navigator.clipboard.writeText(text)
 }
 
-function onInputKeydown(e) {
+function onInputKeydown(e: KeyboardEvent) {
   e.stopPropagation()
-  const { key, target } = e
-  // console.log(key, target.id)
-  if (key === 'Enter') {
+  const target = e.target as HTMLInputElement
+  if (e.key === 'Enter') {
     // 切换到下一个 input
-    document.getElementById((Number(target.id) + 1).toString())?.focus()
+    const nextId = (Number(target.id) + 1).toString()
+    document.getElementById(nextId)?.focus()
   }
 }
 
-function onInputFoucsIn(e, audioPath) {
+function onInputFoucsIn(e: FocusEvent, audioPath: string) {
   if (isAutoPlayWordAudio.value)
     play(audioPath)
 }
 
-function onInputFoucsOut(e, item) {
-  const { target } = e
+function onInputFoucsOut(e: FocusEvent, item: VocabularyItem) {
+  const target = e.target as HTMLInputElement
   const spellValue = target.value.toLowerCase().trim()
   if (spellValue.length < 1) {
     item.spellValue = ''
@@ -161,12 +133,12 @@ function onInputFoucsOut(e, item) {
   }
   else {
     item.spellValue = spellValue
-    item.spellError = !item.word.map(v => v.toLowerCase().trim()).includes(spellValue)
+    item.spellError = !item.word.map((v: string) => v.toLowerCase().trim()).includes(spellValue)
   }
   trainingStats.value = calcStats()
 }
 
-function getInputStyleClass(item) {
+function getInputStyleClass(item: VocabularyItem) {
   const cls = {
     error: 'ml-4 bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 dark:bg-gray-700 focus:border-red-500 inline-block p-2.5 dark:text-red-500 dark:placeholder-red-500 dark:border-red-500',
     normal: 'ml-4 inline-block border border-gray-300 rounded-lg bg-gray-50 p-2.5 text-sm text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:bg-gray-700 dark:text-white focus:ring-blue-500 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:placeholder-gray-400',
@@ -183,11 +155,11 @@ function getInputStyleClass(item) {
 
 function copyAllError() {
   const words = refVocabulary[category.value].words
-  const errorWords = []
+  const errorWords: string[] = []
   for (const group of words) {
     for (const item of group) {
       if (item.spellError)
-        errorWords.push(`${item.word} ${item.pos} ${item.meaning}`)
+        errorWords.push(`${item.word.join(' ')} ${item.pos} ${item.meaning}`)
     }
   }
   navigator.clipboard.writeText(errorWords.join('\n\n'))
@@ -211,26 +183,10 @@ function copyAllError() {
               v-model="category"
               class="block w-full flex-1 border border-gray-300 rounded-lg bg-gray-50 p-2.5 text-sm text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:bg-gray-700 dark:text-white focus:ring-blue-500 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:placeholder-gray-400"
             >
-              <!-- <option value="">
-                全部章节
-              </option> -->
               <option v-for="(_, k) in refVocabulary" :key="k" :value="k">
                 {{ k }}
               </option>
             </select>
-            <!-- <input type="text" name="email" class="ml-3 block w-full border border-gray-300 rounded-lg bg-gray-50 p-2.5 text-gray-900 dark:border-gray-600 focus:border-primary-500 dark:bg-gray-700 sm:text-sm dark:text-white focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500 dark:placeholder-gray-400" placeholder="关键词"> -->
-            <!-- <div class="relative ml-2 flex-1">
-              <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                </svg>
-              </div>
-              <input v-model="keyword" type="search"
-                class="block w-full border border-gray-300 rounded-lg bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 dark:border-gray-600 focus:border-blue-500 dark:bg-gray-700 dark:text-white focus:ring-blue-500 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:placeholder-gray-400"
-                placeholder="Search">
-            </div> -->
             <label class="ml-2 inline-flex cursor-pointer items-center">
               <input v-model="isTrainingModel" type="checkbox" class="peer sr-only">
               <div
@@ -312,7 +268,7 @@ function copyAllError() {
                       </div>
                     </td>
                   </tr>
-                  <template v-for="(wordGroup, i) of refVocabulary[category].words" :key="wordGroup.label">
+                  <template v-for="(wordGroup, i) of refVocabulary[category].words" :key="wordGroup[0]?.id">
                     <tr
                       v-for="item of wordGroup"
                       v-show="(isTrainingModel && (isOnlyShowErrors ? item.spellError : true)) || !isTrainingModel" :id="`tr_${item.id}`"
@@ -334,7 +290,7 @@ function copyAllError() {
                             title="显示原词" @click="item.showSource = !item.showSource"
                           />
                           <input
-                            :id="item.id" autocomplete="off" :class="getInputStyleClass(item)"
+                            :id="`${item.id}`" autocomplete="off" :class="getInputStyleClass(item)"
                             type="text"
                             @focusout="onInputFoucsOut($event, item)" 
                             @focusin="onInputFoucsIn($event, `vocabulary/audio/${category}/${item.word[0]}.mp3`)" 

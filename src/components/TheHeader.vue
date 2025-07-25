@@ -1,4 +1,7 @@
 <script setup lang="ts" generic="T extends any, O extends any">
+import { ref, reactive } from 'vue'
+import { toggleDark } from '~/composables/dark'
+
 const menus = reactive([
   {
     label: '首页',
@@ -44,12 +47,11 @@ const showMobileMenu = ref(false)
     <nav class="fixed z-30 w-full border-b border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-gray-800">
       <div class="mx-auto max-w-screen-2xl flex items-center justify-between">
         <div class="flex items-center justify-start">
-          <a href="/" class="mr-14 flex">
+          <router-link to="/" class="mr-14 flex">
             <span class="hidden self-center whitespace-nowrap text-2xl font-semibold sm:flex dark:text-white">My
               <span class="ml-1 text-red-600"> IELTS™</span>
             </span>
-
-          </a>
+          </router-link>
           <!-- Desktop menu -->
           <div class="hidden w-full items-center justify-between lg:order-1 lg:w-auto lg:flex">
             <ul class="mt-4 flex flex-col items-center justify-items-center text-center align-middle text-sm font-medium lg:mt-0 lg:flex-row space-x-6 xl:space-x-8">

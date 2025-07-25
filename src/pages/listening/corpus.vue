@@ -1,12 +1,6 @@
 <script setup>
 import chapterData from './spelling_convention'
 
-function play(word) {
-  const audio = document.createElement('audio')
-  audio.src = `179_audios/${word}.mp3`
-  audio.play()
-}
-
 const keyword = ref('')
 const chapter = ref('Charpter2 拼写规范')
 const chapters = [
@@ -82,9 +76,6 @@ const curCharpter = computed(() => {
             <th class="w-0 px-6 py-3">
               #
             </th>
-            <th class="w-0">
-              <!-- Pronunciation -->
-            </th>
             <th
               v-for="label in curCharpter.columns"
               :key="label"
@@ -102,9 +93,6 @@ const curCharpter = computed(() => {
           >
             <td class="px-6 py-4">
               {{ index }}
-            </td>
-            <td class="px-6 py-4">
-              <a href="javascript:;" class="i-carbon-volume-up-filled block" @click="play(row[0])" />
             </td>
             <th class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white">
               <a

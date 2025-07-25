@@ -1,17 +1,36 @@
 <script setup>
 import words from './reading538words'
+import { reactive, ref, computed } from 'vue'
 
 const ws = reactive(words)
-
 const keyword = ref('')
+const showReadingTips = ref(false)
+
+// Filter words based on search keyword
+const filteredWords = computed(() => {
+  if (!keyword.value) return ws
+  
+  return ws.map(cat => {
+    const filteredCat = { ...cat }
+    filteredCat.words = cat.words.filter(w => 
+      w[1].toLowerCase().includes(keyword.value.toLowerCase()) || 
+      w[3].some(meaning => meaning.toLowerCase().includes(keyword.value.toLowerCase()))
+    )
+    return filteredCat
+  }).filter(cat => cat.words.length > 0)
+})
+
+function toggleReadingTips() {
+  showReadingTips.value = !showReadingTips.value
+}
 </script>
 
 <template>
   <div class="px-4 pt-6 2xl:px-0">
     <div class="border border-gray-200 rounded-lg bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
-      <!-- Card header -->
+      <!-- Vocabulary list section -->
       <template
-        v-for="cat in ws"
+        v-for="cat in filteredWords"
         :key="cat.title"
       >
         <div class="mt-6 items-center justify-between lg:flex">
@@ -24,13 +43,11 @@ const keyword = ref('')
           <div class="items-center sm:flex">
             <div class="flex items-center">
               <button
-                type="button"
-                class="rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white dark:bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                @click="$router.push('listening/179practice')"
+                @click="toggleReadingTips"
+                class="rounded-lg bg-gray-200 px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-300 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
               >
-                练习
+                {{ showReadingTips ? '隐藏技巧' : '阅读技巧' }}
               </button>
-              <!-- <input type="text" name="email" class="ml-3 block w-full border border-gray-300 rounded-lg bg-gray-50 p-2.5 text-gray-900 dark:border-gray-600 focus:border-primary-500 dark:bg-gray-700 sm:text-sm dark:text-white focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500 dark:placeholder-gray-400" placeholder="关键词"> -->
               <div class="relative ml-2 flex-1">
                 <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <svg class="h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -46,6 +63,20 @@ const keyword = ref('')
             </div>
           </div>
         </div>
+        
+        <div v-if="showReadingTips" class="mt-4 p-4 bg-blue-50 rounded-lg dark:bg-blue-900 dark:bg-opacity-20">
+          <h4 class="font-medium mb-2 dark:text-white">雅思阅读技巧</h4>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+            <li>先快速浏览文章，了解大意和结构</li>
+            <li>仔细阅读题目，确定关键词</li>
+            <li>根据关键词定位到文章中的相关段落</li>
+            <li>注意同义替换词，题目中的词往往不会在文章中直接出现</li>
+            <li>注意题目的顺序，通常与文章内容出现的顺序一致</li>
+            <li>对于判断题，要特别注意绝对词（always, never, all等）</li>
+            <li>合理分配时间，每篇文章建议控制在20分钟内</li>
+          </ul>
+        </div>
+        
         <div class="mt-6">
           <table class="w-full text-left text-sm text-gray-500 dark:text-gray-400">
             <thead class="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
@@ -53,7 +84,6 @@ const keyword = ref('')
                 <th class="w-0 px-6 py-3">
                   排名
                 </th>
-                <th class="w-0 px-6 py-3" />
                 <th scope="col" class="w-0 px-6 py-3">
                   考点词
                 </th>
@@ -71,14 +101,11 @@ const keyword = ref('')
             <tbody>
               <tr
                 v-for="w in cat.words"
-                :key="w.index"
+                :key="w[0]"
                 class="border-b bg-white dark:border-gray-700 dark:bg-gray-800"
               >
                 <td class="px-6 py-4">
                   {{ w[0] }}
-                </td>
-                <td class="px-6 py-4">
-                  <a href="javascript:;" class="i-carbon-volume-up-filled block" @click="play(w[1])" />
                 </td>
                 <th scope="row" class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white">
                   <a

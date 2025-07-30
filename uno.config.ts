@@ -42,12 +42,16 @@ export default defineConfig({
       },
     }),
     presetWebFonts({
-      provider: 'bunny',
+      provider: 'google',
       fonts: {
         sans: 'DM Sans',
         serif: 'DM Serif Display',
         mono: 'DM Mono',
         Charmonman: 'Charmonman',
+      },
+      timeouts: {
+        warning: 10000,
+        failure: 20000,
       },
     }),
   ],

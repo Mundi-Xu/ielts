@@ -1,125 +1,74 @@
-<p><br></p>
+# My IELTS™
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/salvation_lies_within_IELTS_dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="public/salvation_lies_within_IELTS_light.svg">
-  <img alt="Slogan: Salvation lies within IELTS" src="public/salvation_lies_within_IELTS_light.svg">
-</picture>
+## Online Address
+[https://mundi-xu.github.io/ielts](https://mundi-xu.github.io/ielts)
 
-<p><br></p>
-<p><br></p>
-<h1 align='center'>
-  My <span>IELTS™</span>
-</h1>
+## Overview
+IELTS preparation materials, including vocabulary, grammar, listening, speaking, reading, and writing resources from the most popular sources.
 
-<h2>在线地址 <a href="https://mundi-xu.github.io/ielts/">https://mundi-xu.github.io/ielts</a></h2>
+## Sections
 
+### Vocabulary
+IELTS Vocabulary (Liu Hongbo's orange book)
 
-## 概述
+- IELTS core vocabulary
+- Logical word group memory method
+- Original book audio
+- Vocabulary list with training mode
 
-雅思备考资料，包含词汇、语法、听说读写最出名的一些内容
+Features:
+- Interactive vocabulary training with audio pronunciation
+- Spelling practice mode with error tracking
+- Word groups organized by categories
+- Audio playback controls with keyboard shortcuts
+- Copy functionality for words and error review
 
-- [x] 词汇练习模式
+### Grammar
+New Oriental IELTS Grammar
 
-## 规划栏目
+- Videos
+- Lecture notes
+- Mind maps
 
-### 词汇
+### Listening
+Understanding IELTS listening and basic exam principles and techniques
 
-雅思词汇真经（刘洪波橙色的那本）
+- Basic concepts and test-taking strategies
+- 179 key listening words with synonym replacement
+- IELTS Listening King Corpus
 
-- 雅思核心词汇
-- 逻辑词群记忆法
-- 原书音频
+### Speaking
+Speaking practice topics and questions for IELTS speaking test preparation.
 
-词列表
+### Reading
+- 538 key reading words with synonym replacements
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-vocabulary-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="public/screenshot/screenshot-vocabulary-light.png">
-  <img alt="Vocabulary" src="public/screenshot/screenshot-vocabulary-light.png">
-</picture>
+### Writing
+Writing content, starting from the basics
 
-练习模式
+- Gu Jiabei's "Hand-in-Hand IELTS Writing V6.0" - 100 sentence translation practice
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-vocabulary-training-mode-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="public/screenshot/screenshot-vocabulary-training-mode-light.png">
-  <img alt="Vocabulary Training Mode" src="public/screenshot/screenshot-vocabulary-training-mode-light.png">
-</picture>
+## Development
+This project is built with:
 
-### 语法
+- [Vitesse Lite](https://github.com/antfu/vitesse-lite) as the template
+- Styling based on [Flowbite](https://github.com/themesberg/flowbite) & [Flowbite Admin Dashboard](https://flowbite-admin-dashboard.vercel.app)
 
-新东方雅思语法
-
-- 视频
-- 讲义
-- 思维导图
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-grammar-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="public/screenshot/screenshot-grammar-light.png">
-  <img alt="Grammar" src="public/screenshot/screenshot-grammar-light.png">
-</picture>
-
-### 听力
-
-了解雅思听力，以及考试中的一些基本原则、技巧
-
-- 基本概念和应试技巧
-- 听力 179 考点词
-- [WIP] 雅思听力王语料库
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-listening-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="public/screenshot/screenshot-listening-light.png">
-  <img alt="Listening" src="public/screenshot/screenshot-listening-light.png">
-</picture>
-
-### 口语
-
-TODO
-
-### 阅读
-
-- 538 考点词同义替换
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-reading-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="public/screenshot/screenshot-reading-light.png">
-  <img alt="Reading" src="public/screenshot/screenshot-reading-light.png">
-</picture>
-
-
-### 写作
-
-写作相关内容，从基础开始
-
-- 顾家北手把手教你雅思写作 V6.0 —— 100 句翻译练习
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="public/screenshot/screenshot-writing-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="public/screenshot/screenshot-writing-light.png">
-  <img alt="Writing" src="public/screenshot/screenshot-writing-light.png">
-</picture>
-
-## 开发
-
-本项目使用
-
-- [Vitesse Lite](https://github.com/antfu/vitesse-lite) 作为模板开发
-- 样式部分参照了 [Flowbite](https://github.com/themesberg/flowbite) & [Flowbite Admin Dashboard](https://flowbite-admin-dashboard.vercel.app)
-
-所以需要对 Vue3、TailWindCSS 有一定的了解才能二次开发
+To work on this project, you should have some knowledge of Vue3 and TailWindCSS.
 
 ```bash
-# 安装依赖
+# Install dependencies
 pnpm i
 
-# 开发模式
+# Development mode
 pnpm run dev
 
-# 构建
+# Build
 pnpm run build
 ```
 
-## 禁止将本项目用于任何商业目的！！！
+## Note
+This project is for personal IELTS preparation use only. All materials are collected from public sources for educational purposes.
+
+## License
+This project is for personal use only. Commercial use is prohibited.

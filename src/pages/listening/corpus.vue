@@ -139,7 +139,7 @@ const curCharpter = computed(() => {
             {{ w.index }}
           </td>
           <td class="px-6 py-4">
-            <a href="javascript:;" class="i-carbon-volume-up-filled block" @click="play(w.word)" />
+            <button type="button" class="i-carbon-volume-up-filled block" @click="play(w.word)" />
           </td>
           <th scope="row" class="whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white">
             <a

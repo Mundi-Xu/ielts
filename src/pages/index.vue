@@ -69,10 +69,9 @@ const menus = reactive<MenuItem[]>([
           </p>
         </div>
         <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-12 space-y-8 md:space-y-0">
-          <RouterLink
+          <div
             v-for="m in menus"
             :key="m.label"
-            :to="m.link"
             class="block"
           >
             <div class="mb-4 h-10 w-10 flex items-center justify-center rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
@@ -84,7 +83,7 @@ const menus = reactive<MenuItem[]>([
             <p class="text-gray-500 dark:text-gray-400">
               {{ m.desc }}
             </p>
-          </RouterLink>
+          </div>
         </div>
       </div>
     </section>

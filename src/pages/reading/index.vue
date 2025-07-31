@@ -40,6 +40,16 @@ function toggleReadingTips() {
               {{ cat.title }}
             </h3>
             <span class="text-base font-normal text-gray-500 dark:text-gray-400">{{ cat.define }}</span>
+            <p v-if="cat.description" class="mt-1 text-sm text-gray-600 dark:text-gray-300">{{ cat.description }}</p>
+            <div v-if="cat.title === '第 1 类考点词'" class="mt-2 text-sm text-blue-600 dark:text-blue-400">
+              <strong>学习重点：</strong>这些词汇必须滚瓜烂熟，建议每天复习2-3遍，直到完全掌握。
+            </div>
+            <div v-else-if="cat.title === '第 2 类考点词'" class="mt-2 text-sm text-purple-600 dark:text-purple-400">
+              <strong>学习重点：</strong>这些词汇需要熟练掌握，建议每天复习1-2遍，重点记忆同义替换。
+            </div>
+            <div v-else-if="cat.title === '第 3 类考点词'" class="mt-2 text-sm text-green-600 dark:text-green-400">
+              <strong>学习重点：</strong>这些词汇需要掌握基本含义和常见同义替换，建议每周复习2-3次。
+            </div>
           </div>
           <div class="items-center sm:flex">
             <div class="flex items-center">
@@ -102,6 +112,20 @@ function toggleReadingTips() {
                 <li>剩余时间用于检查答案</li>
               </ul>
             </li>
+            <li><strong>同义替换训练</strong>：熟练掌握同义替换是提高阅读成绩的关键，建议每天练习20-30组同义词替换</li>
+            <li><strong>词汇积累</strong>：重点掌握高频考点词的不同词性和搭配用法，特别关注一词多义现象</li>
+            <li><strong>长难句分析</strong>：学会分析复杂句式结构，掌握主谓宾、定状补等语法成分的识别方法</li>
+          </ul>
+          
+          <h4 class="font-medium mt-4 mb-2 dark:text-white">
+            学习建议
+          </h4>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+            <li><strong>每日练习</strong>：建议每天完成1-2篇阅读练习，保持语感和解题技巧</li>
+            <li><strong>错题分析</strong>：建立错题本，分析错误原因（定位错误、同义替换不熟悉、语法理解偏差等）</li>
+            <li><strong>限时训练</strong>：严格按照考试时间进行模拟训练，培养时间管理能力</li>
+            <li><strong>词汇复习</strong>：利用本页面的考点词分类进行系统复习，重点掌握第1类和第2类考点词</li>
+            <li><strong>真题研究</strong>：深入研究近10年雅思真题，总结出题规律和考点分布</li>
           </ul>
         </div>
 

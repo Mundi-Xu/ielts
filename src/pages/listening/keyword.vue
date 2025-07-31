@@ -16,9 +16,9 @@ const keyword = ref('')
   <div class="mt-6 items-center justify-between lg:flex">
     <div class="mb-4 lg:mb-0">
       <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
-        听力 179 考点词
+        雅思听力179核心考点词
       </h3>
-      <span class="text-base font-normal text-gray-500 dark:text-gray-400">考点词以及对应的同义替换</span>
+      <span class="text-base font-normal text-gray-500 dark:text-gray-400">掌握核心词汇及其同义替换，提高听力理解能力</span>
     </div>
     <div class="items-center sm:flex">
       <div class="flex items-center">

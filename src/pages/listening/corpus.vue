@@ -2,11 +2,11 @@
 import chapterData from './spelling_convention'
 
 const keyword = ref('')
-const chapter = ref('Charpter2 拼写规范')
+const chapter = ref('Chapter 2 拼写规范')
 const chapters = [
-  'Charpter2 拼写规范',
-  'Charpter3 特别名词',
-  'Charpter4 形容词副词',
+  'Chapter 2 拼写规范',
+  'Chapter 3 特别名词',
+  'Chapter 4 形容词副词',
 ]
 
 const curCharpter = computed(() => {
@@ -61,7 +61,7 @@ const curCharpter = computed(() => {
     </div>
   </div>
   <div class="mt-6">
-    <template v-if="chapter === 'Charpter2 拼写规范'">
+    <template v-if="chapter === 'Chapter 2 拼写规范' || chapter === 'Chapter 3 特别名词' || chapter === 'Chapter 4 形容词副词'">
       <div class="mb-4 mt-6 items-center justify-between lg:flex">
         <div class="mb-4 lg:mb-0">
           <h3 class="mb-2 font-bold text-gray-900 dark:text-white">

@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 const scoreTable = [
   ['39-40', '9.0'],
   ['37-38', '8.5'],
@@ -18,143 +20,213 @@ const scoreTable = [
   ['1', '1.0'],
   ['absent', '0.0'],
 ]
+
+const showListeningTips = ref(false)
+
+function toggleListeningTips() {
+  showListeningTips.value = !showListeningTips.value
+}
 </script>
 
 <template>
   <div class="px-4 pt-6 text-gray-500 2xl:px-0 dark:text-gray-400">
-    <h3 class="mb-4 text-xl font-semibold text-black dark:text-white">
-      概述
-    </h3>
-    <div class="mb-4">
-      <p>了解雅思听力，以及考试中的一些基本原则、技巧</p>
-      <br>
-      <p>评分表</p>
-      <table class="w-full text-center text-sm text-gray-500 dark:text-gray-400">
-        <tbody>
-          <tr class="border bg-white dark:border-gray-700 dark:bg-gray-800">
-            <td v-for="v in scoreTable" :key="v[0]" class="border px-6 py-4">
-              {{ v[0] }}
-            </td>
-          </tr>
-          <tr class="border bg-white dark:border-gray-700 dark:bg-gray-800">
-            <td v-for="v in scoreTable" :key="v[0]" class="border px-6 py-4">
-              {{ v[1] }}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <ul class="ml-6 list-disc">
-        <li>时限 30min</li>
-        <li>结尾 10min 额外时间（这里说的应该是笔试，机考可能不一样）</li>
-        <li>40 个题（错 10 个以内都可以得 7+）</li>
-        <li>4 个小节，每个 10 题，难度递增</li>
-        <li>答案是顺序的</li>
-        <li>
-          3 种题型
-          <ul class="ml-6 list-disc">
-            <li>gap-fill 填空</li>
-            <li>multiple choice 选择题（不是多选题，是多个选项选一个）</li>
-            <li>matching 匹配</li>
-          </ul>
-        </li>
-
-        <li>多种口音</li>
-        <li>只能听一次！！！</li>
-      </ul>
-    </div>
+    <div class="border border-gray-200 rounded-lg bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
+      <div class="flex items-center justify-between">
+        <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">
+          雅思听力概述
+        </h3>
+        <button
+          class="rounded-lg bg-gray-200 px-5 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-300 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
+          @click="toggleListeningTips"
+        >
+          {{ showListeningTips ? '隐藏技巧' : '听力技巧' }}
+        </button>
+      </div>
+      
+      <div v-if="showListeningTips" class="mt-4 p-4 bg-blue-50 rounded-lg dark:bg-blue-900 dark:bg-opacity-20">
+        <h4 class="font-medium mb-2 dark:text-white">
+          雅思听力技巧
+        </h4>
+        <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+          <li><strong>预读题目</strong>：利用每个部分开始前和间隙时间快速浏览题目，划出关键词，预测可能的答案类型和内容</li>
+          <li><strong>关键词识别</strong>：注意听关键词及其同义替换，这是雅思听力的核心考点，约70%的题目涉及同义替换</li>
+          <li><strong>注意信号词</strong>：特别关注表示转折、因果、并列等逻辑关系的信号词，如but, however, because, therefore等</li>
+          <li>
+            <strong>各Section策略</strong>：
+            <ul class="list-circle pl-5 mt-1">
+              <li>Section 1: 日常生活场景，注意人名、地址、电话号码等细节信息的拼写</li>
+              <li>Section 2: 社会生活场景，关注地点、活动、设施等信息</li>
+              <li>Section 3: 教育培训场景，注意学术讨论中的观点和建议</li>
+              <li>Section 4: 学术独白场景，关注专业术语和学术概念</li>
+            </ul>
+          </li>
+          <li><strong>拼写准确性</strong>：听力答案要求拼写完全正确，特别注意常见词汇的拼写和易混淆词汇</li>
+          <li><strong>时间管理</strong>：合理分配注意力，不要因为一题没听清而影响后续题目，学会适时放弃</li>
+          <li><strong>检查答案</strong>：充分利用最后10分钟检查时间，检查拼写、语法和格式是否正确</li>
+        </ul>
+        
+        <h4 class="font-medium mt-4 mb-2 dark:text-white">
+          学习建议
+        </h4>
+        <ul class="list-disc pl-5 space-y-1 text-gray-700 dark:text-gray-300">
+          <li><strong>精听练习</strong>：每天进行20-30分钟精听训练，逐句理解并跟读，提高语音识别能力</li>
+          <li><strong>泛听积累</strong>：每天听30分钟以上英语材料（新闻、播客、纪录片等），培养语感</li>
+          <li><strong>考点词掌握</strong>：熟练掌握听力核心考点词的不同词性和搭配用法，特别关注同义替换</li>
+          <li><strong>模拟训练</strong>：定期进行完整的听力模拟测试，严格按照考试时间要求</li>
+          <li><strong>错题分析</strong>：建立错题本，分析错误原因（词汇不熟悉、同义替换未识别、注意力分散等）</li>
+          <li><strong>语音训练</strong>：学习不同口音特点，提高对各种英语口音的适应能力</li>
+        </ul>
+      </div>
+      
+      <div class="mb-4 mt-6">
+        <p class="mb-4">了解雅思听力考试的基本结构、评分标准和应试技巧</p>
+        <br>
+        <p>评分表</p>
+        <table class="w-full text-center text-sm text-gray-500 dark:text-gray-400">
+          <tbody>
+            <tr class="border bg-white dark:border-gray-700 dark:bg-gray-800">
+              <td v-for="v in scoreTable" :key="v[0]" class="border px-6 py-4">
+                {{ v[0] }}
+              </td>
+            </tr>
+            <tr class="border bg-white dark:border-gray-700 dark:bg-gray-800">
+              <td v-for="v in scoreTable" :key="v[0]" class="border px-6 py-4">
+                {{ v[1] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <ul class="ml-6 list-disc">
+          <li><strong>考试时长：</strong>30分钟听力测试 + 10分钟检查时间（纸笔考试）/ 30分钟包含检查时间（机考）</li>
+          <li><strong>题目数量：</strong>40道题，错10道以内可获得7分以上</li>
+          <li><strong>考试结构：</strong>4个部分，每部分10题，难度递增</li>
+          <li><strong>答题顺序：</strong>答案按照录音顺序出现</li>
+          <li>
+            <strong>题型分类：</strong>
+            <ul class="ml-6 list-disc">
+              <li>填空题（Form/Note/Table/Flow-chart/Sentence completion）</li>
+              <li>选择题（Multiple choice）</li>
+              <li>匹配题（Matching）</li>
+              <li>地图题（Plan/Simple map labelling）</li>
+              <li>图表题（Diagram labelling）</li>
+            </ul>
+          </li>
+          <li><strong>语言要求：</strong>涵盖多种英语口音（英式、澳式、美式、新西兰式等）</li>
+          <li><strong>播放次数：</strong>每段录音只播放一次</li>
+        </ul>
+      </div>
     <h3 class="my-4 text-xl font-semibold text-black dark:text-white">
-      Section 1
+      Section 1 (日常生活社交场景)
     </h3>
     <ul class="mb-4 ml-6 list-disc">
-      <li>2 人对话</li>
+      <li><strong>对话形式：</strong>2人日常对话（如租房、旅游咨询、工作申请等）</li>
       <li>
-        日常简单交流
+        <strong>话题内容：</strong>日常生活相关场景
         <ul class="ml-6 list-disc">
-          <li>e.g. making a booking</li>
+          <li>旅行安排（booking a hotel）</li>
+          <li>租房咨询（renting an apartment）</li>
+          <li>工作申请（job application）</li>
         </ul>
       </li>
-      <li>一个说话的给出基本信息</li>
-      <li>简单的填空题：补全丢失的信息</li>
+      <li><strong>题目类型：</strong>以填空题为主，补全表格、笔记或表格中的缺失信息</li>
       <li>
-        信息一般为
+        <strong>考查重点：</strong>细节信息捕捉
         <ul class="ml-6 list-disc">
-          <li>names</li>
-          <li>addresses</li>
-          <li>dates</li>
-          <li>times</li>
-          <li>numbers</li>
+          <li>人名（names）</li>
+          <li>地址（addresses）</li>
+          <li>日期（dates）</li>
+          <li>时间（times）</li>
+          <li>电话号码（phone numbers）</li>
+          <li>价格（prices）</li>
         </ul>
       </li>
-      <li>第一节很简单，必须拿高分 9-10 个正确，这样可以让你在后面难的部分有更多犯错空间</li>
+      <li><strong>难度评估：</strong>相对简单，目标分数9-10分，为后续较难题目预留容错空间</li>
     </ul>
-    <p><strong>关键技巧：</strong></p>
+    <p><strong>应试策略：</strong></p>
     <ul class="ml-6 list-disc">
-      <li>Use the breaks to read ahead 利用中间中断的时间提前读后面的题</li>
-      <li>Before each section starts 每个小节开始前的停顿</li>
-      <li>In the middle of each section (Except in section 4) 每个小节中间的停顿，第四节中间没有停顿</li>
-      <li>At the end of each section 每个小节结束的时候</li>
-      <li>Don't check back, read ahead 不要向后看！不要向后看！不要向后看！错过了就错过了</li>
+      <li><strong>预读技巧：</strong>充分利用题目间间隙时间预读下一题，标记关键词</li>
+      <li><strong>时间节点：</strong>每个部分开始前、中间停顿点、结束时都可预读题目</li>
+      <li><strong>注意：</strong>Section 4中间无停顿，需在Section 3结束后充分利用时间</li>
+      <li><strong>答题原则：</strong>专注当前题目，错过不回看，直接进入下一题</li>
     </ul>
 
     <h3 class="my-4 text-xl font-semibold text-black dark:text-white">
-      Section 2
+      Section 2 (社会生活场景)
     </h3>
     <ul class="ml-6 list-disc">
-      <li>Use all of the break time at the end of section 1 第一节结束后立马读第二节的题目</li>
-      <li>只有一个说话的</li>
+      <li><strong>准备时间：</strong>充分利用Section 1结束后的时间预读Section 2题目</li>
+      <li><strong>录音形式：</strong>独白（一个人介绍或说明某个话题）</li>
       <li>
-        一个简单的非学术类话题的陈述：
+        <strong>话题内容：</strong>社会生活相关话题
         <ul class="ml-6 list-disc">
-          <li>Tourism</li>
-          <li>A park</li>
-          <li>Local facilities</li>
+          <li>旅游景点介绍（Tourism）</li>
+          <li>公园设施说明（A park）</li>
+          <li>当地设施介绍（Local facilities）</li>
+          <li>活动安排说明（Event organization）</li>
+          <li>规章制度介绍（Rules and regulations）</li>
         </ul>
       </li>
-      <li>题型：填空、选择、匹配</li>
-      <li>中间会停顿（一般让你先看前 5 个问题，中间停顿让你再看后 5 个问题）</li>
-      <li>Still quite easy, aim for a high score 难度低，依然需要争取拿高分</li>
+      <li><strong>题目类型：</strong>填空题、选择题、匹配题等多种题型混合</li>
+      <li><strong>时间安排：</strong>中间有停顿（前5题完成后有时间预读后5题）</li>
+      <li><strong>难度评估：</strong>相对简单，目标高分（9-10分）</li>
     </ul>
 
     <h3 class="my-4 text-xl font-semibold text-black dark:text-white">
-      Section 3
+      Section 3 (教育培训场景)
     </h3>
 
     <ul class="ml-6 list-disc">
-      <li>Use breaks to read and underline 利用空隙读题和划关键词</li>
-      <li>2-3 个人的对话</li>
-      <li>对话会和教育、培训有关，例如：老师和 2 个学生</li>
-      <li>Gap-fill, multiple choice (difficult) 题型：填空、选择（难度高）</li>
-      <li>Underline keywords in questions and choices 在题目和选项中划关键词</li>
-      <li>Listen for keywords or synonyms 听关键词或者对应的同义词</li>
-      <li>高难度小节，目标应该是 6-7 个答对</li>
+      <li><strong>预读策略：</strong>利用Section 2结束后的间隙时间充分预读题目并标记关键词</li>
+      <li><strong>对话形式：</strong>2-3人学术讨论（如导师与学生、学生小组讨论）</li>
+      <li><strong>话题内容：</strong>教育、培训相关话题
+        <ul class="ml-6 list-disc">
+          <li>课程选择与比较</li>
+          <li>作业与项目讨论</li>
+          <li>学习方法与建议</li>
+          <li>论文写作指导</li>
+          <li>学术研究讨论</li>
+        </ul>
+      </li>
+      <li><strong>题目类型：</strong>填空题、选择题（难度较高）</li>
+      <li><strong>答题技巧：</strong>在题目和选项中划出关键词，注意同义替换</li>
+      <li><strong>听力重点：</strong>关注关键词及其同义表达</li>
+      <li><strong>难度评估：</strong>难度较高，目标分数6-7分</li>
     </ul>
 
     <h3 class="my-4 text-xl font-semibold text-black dark:text-white">
-      Section 4
+      Section 4 (学术独白场景)
     </h3>
     <ul class="ml-6 list-disc">
-      <li>使用第三节的空隙读题</li>
-      <li>划关键词</li>
-      <li>本节中间没有停顿，题目、关键词要尽量读、划</li>
-      <li>只有一个人在那说</li>
-      <li>内容学术相关</li>
-      <li>题型：填空、选择</li>
-      <li>听关键词或者对应的同义词</li>
-      <li>Difficult: faster speech, more content, extra information 很难：说的很快、内容多、很多额外信息。比如：30s 的语音中可能没有给任何答案</li>
+      <li><strong>准备时间：</strong>充分利用Section 3结束后的间隙时间预读题目并划关键词</li>
+      <li><strong>录音形式：</strong>学术主题独白（教授讲座、学术报告等）</li>
+      <li><strong>时间特点：</strong>Section 4中间无停顿，需在Section 3结束后充分利用时间</li>
+      <li><strong>话题内容：</strong>学术相关主题
+        <ul class="ml-6 list-disc">
+          <li>科学研究介绍</li>
+          <li>学术理论讲解</li>
+          <li>历史事件分析</li>
+          <li>地理环境描述</li>
+          <li>生物物种介绍</li>
+        </ul>
+      </li>
+      <li><strong>题目类型：</strong>填空题、选择题</li>
+      <li><strong>听力重点：</strong>关注关键词及其同义替换</li>
+      <li><strong>难度特点：</strong>语速较快、内容密集、信息量大，需要高度集中注意力捕捉关键信息</li>
+      <li><strong>难度评估：</strong>最难部分，目标分数6-7分</li>
     </ul>
 
     <h3 class="my-4 text-xl font-semibold text-black dark:text-white">
       总结
     </h3>
-    <p>Do some real practice tests 模拟考试练习</p>
+    <p class="mb-2">雅思听力备考需要系统性训练和模拟考试练习</p>
     <ol class="ml-6 list-decimal">
-      <li>Read ahead (only check back at the end) 向前读题，只在整个听力结束的时候才回头检查</li>
-      <li>Underline keywords 划关键词，读题的时候要划关键词</li>
-      <li>Listen for keywords or synonyms 注意听关键词或者其对应的同义词</li>
-      <li>Be careful with spelling 注意拼写，听出来写不对也是没分的</li>
-      <li>Don’t get stuck on a difficult question - move forward 不要被难的题卡住，直接过</li>
-      <li>Concentrate! 集中注意力，整个 30 分钟要全神贯注</li>
+      <li><strong>预读策略：</strong>始终向前预读题目，只在听力结束后回头检查答案</li>
+      <li><strong>关键词技巧：</strong>养成划关键词的习惯，重点关注同义替换</li>
+      <li><strong>听力专注：</strong>注意捕捉关键词及其同义表达</li>
+      <li><strong>拼写准确：</strong>确保答案拼写正确，错误拼写不得分</li>
+      <li><strong>时间管理：</strong>遇到难题不纠结，保持答题节奏</li>
+      <li><strong>全程专注：</strong>30分钟听力测试需要全神贯注</li>
     </ol>
   </div>
 </template>

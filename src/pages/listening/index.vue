@@ -53,7 +53,7 @@ function toggleListeningTips() {
           <li><strong>注意信号词</strong>：特别关注表示转折、因果、并列等逻辑关系的信号词，如but, however, because, therefore等</li>
           <li>
             <strong>各Section策略</strong>：
-            <ul class="list-circle pl-5 mt-1">
+            <ul class="list-disc pl-5 mt-1">
               <li>Section 1: 日常生活场景，注意人名、地址、电话号码等细节信息的拼写</li>
               <li>Section 2: 社会生活场景，关注地点、活动、设施等信息</li>
               <li>Section 3: 教育培训场景，注意学术讨论中的观点和建议</li>
@@ -116,6 +116,8 @@ function toggleListeningTips() {
           <li><strong>播放次数：</strong>每段录音只播放一次</li>
         </ul>
       </div>
+    </div>
+    
     <h3 class="my-4 text-xl font-semibold text-black dark:text-white">
       Section 1 (日常生活社交场景)
     </h3>

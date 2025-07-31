@@ -94,10 +94,15 @@ const showMobileMenu = ref(false)
     </nav>
     <nav class="bg-white dark:bg-gray-900">
       <!-- Mobile menu -->
+      <div 
+        v-show="showMobileMenu" 
+        class="lg:hidden fixed inset-0 z-20 bg-black bg-opacity-50 transition-opacity"
+        @click="showMobileMenu = false"
+      ></div>
       <ul
         v-show="showMobileMenu"
         style="display: none"
-        class="mt-0 w-full flex-col pt-16 text-sm font-medium lg:hidden"
+        class="lg:hidden fixed top-16 left-0 right-0 bottom-0 z-30 bg-white dark:bg-gray-800 overflow-y-auto pt-4"
       >
         <li
           v-for="m in menus"
@@ -105,11 +110,11 @@ const showMobileMenu = ref(false)
           class="block border-b dark:border-gray-700"
         >
           <router-link
-            class="block px-4 py-3 text-gray-900 lg:px-0 lg:py-0 dark:text-white lg:hover:underline"
+            class="block px-6 py-4 text-gray-900 dark:text-white flex items-center text-lg font-medium"
             :to="m.link"
             @click="showMobileMenu = false"
           >
-            <i class="mr-1 inline-block" :class="m.icon" /> {{ m.label }}
+            <i class="mr-3 inline-block" :class="m.icon" /> {{ m.label }}
           </router-link>
         </li>
       </ul>

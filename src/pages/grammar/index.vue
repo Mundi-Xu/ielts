@@ -32,7 +32,7 @@
       </h3>
       <div class="mb-4">
         <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">听完课跟着老师画的，使用的百度脑图</p>
-        <img src="/grammar/grammar-mindmap.svg" alt="语法脑图" style="width:100%;max-width:100%;height:auto;display:block; border-radius:0.5rem; box-shadow:0 2px 8px 0 rgba(0,0,0,0.06); background:#fff;" />
+        <img src="/grammar/grammar-mindmap.svg" alt="语法脑图" style="width:100%;max-width:100%;height:auto;display:block; border-radius:0.5rem; box-shadow:0 2px 8px 0 rgba(0,0,0,0.06); background:#fff;" loading="lazy" />
       </div>
     </div>
   </div>

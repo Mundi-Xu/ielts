@@ -25,7 +25,6 @@
 19|rather than* || 而非，不是| but, yet, however, whereas, nonetheless, nevertheless, although, notwithstanding, though, instead| *转折结构是雅思阅读的重要考点
 20|thanks to* || 由于，幸亏| stem from, derive, owing to, due to, according to, because of, on account of, as a result of, leading to, because, since, for, in that, as, therefore, hence |*因果关系是雅思阅读重要考点
 
-
 ## 第 2 类观点词
 
 熟记 10 遍以上

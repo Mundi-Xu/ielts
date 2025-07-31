@@ -1,19 +1,19 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { RouterLink } from 'vue-router'
 import { reactive } from 'vue'
+import MenuItem from '~/components/MenuItem.vue'
 
 defineOptions({
   name: 'IndexPage',
 })
 
-interface MenuItem {
+interface MenuItemType {
   label: string
   icon: string
   link: string
   desc: string
 }
 
-const menus = reactive<MenuItem[]>([
+const menus = reactive<MenuItemType[]>([
   {
     label: '词汇',
     icon: 'i-carbon-chart-histogram',
@@ -22,7 +22,7 @@ const menus = reactive<MenuItem[]>([
   },
   {
     label: '语法',
-    icon: 'i-carbon-load-balancer-vpc ',
+    icon: 'i-carbon-load-balancer-vpc',
     link: '/grammar',
     desc: '新东方雅思语法课程，针对雅思考试设计，思维导图',
   },
@@ -69,28 +69,14 @@ const menus = reactive<MenuItem[]>([
           </p>
         </div>
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <article
-            v-for="(m, index) in menus"
+          <MenuItem
+            v-for="m in menus"
             :key="m.label"
-            class="block relative rounded-lg bg-gray-50 p-6 transition-all duration-200 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600"
-            role="article"
-            :aria-labelledby="`menu-item-heading-${index}`"
-          >
-            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900 sm:h-10 sm:w-10 md:h-12 md:w-12">
-              <i class="block h-6 w-6 text-primary-600 dark:text-primary-300 sm:h-5 sm:w-5 md:h-6 md:w-6" :class="m.icon" :aria-hidden="true" />
-            </div>
-            <h3 :id="`menu-item-heading-${index}`" class="mb-2 text-xl font-bold dark:text-white">
-              {{ m.label }}
-            </h3>
-            <p class="text-gray-500 dark:text-gray-400">
-              {{ m.desc }}
-            </p>
-            <RouterLink 
-              :to="m.link" 
-              class="absolute inset-0 z-10" 
-              :aria-label="`前往${m.label}页面`"
-            />
-          </article>
+            :label="m.label"
+            :icon="m.icon"
+            :link="m.link"
+            :desc="m.desc"
+          />
         </div>
       </div>
     </section>

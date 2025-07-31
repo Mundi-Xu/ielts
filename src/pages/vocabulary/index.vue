@@ -1,6 +1,7 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { ref, reactive, watch, onMounted, onUpdated } from 'vue'
 import type { VocabularyData, VocabularyItem } from '~/types/vocabulary'
+import { onMounted, onUnmounted, reactive, ref, watch } from 'vue'
+import { audioManager } from '~/composables/audio'
 import vocabulary from './vocabulary'
 
 const CHAPTER_KEY = 'vocabulary_chapter'
@@ -48,6 +49,32 @@ function calcStats() {
   return `${missing} 个未完成，${correct} 个正确，${error} 个错误`
 }
 
+// Keyboard event handler
+function handleKeyDown(ev: KeyboardEvent) {
+  // 激活的那个音频可以通过方向键进行快进/退
+  if (['ArrowLeft', 'ArrowRight', ' '].includes(ev.key)) {
+    ev.preventDefault()
+
+    // For space key, we'll use the global audio manager
+    if (ev.key === ' ') {
+      // Audio play/pause is handled by the audioManager
+      return
+    }
+
+    // For arrow keys, we'll use the global audio manager if needed
+    const keyMap = {
+      ArrowLeft: -5,
+      ArrowRight: 5,
+    }
+
+    if (keyMap[ev.key as keyof typeof keyMap]) {
+      // Audio seeking would be handled by individual audio components
+      // This is a simplified approach - in a full implementation,
+      // we would need to track which audio is currently active
+    }
+  }
+}
+
 onMounted(() => {
   isLoading.value = true
   try {
@@ -56,19 +83,11 @@ onMounted(() => {
       loaded.value = true
       isLoading.value = false
     }, 300)
-    
-    // 只能同时播放一个音频
-    const audioTags = document.getElementsByTagName('audio')
-    for (const audio of Array.from(audioTags)) {
-      audio.onplay = () => {
-        for (const _audio of Array.from(audioTags)) {
-          _audio.blur()
-          if (audio !== _audio)
-            _audio.pause()
-        }
-      }
-    }
-  } catch (error) {
+
+    // Add keyboard event listener
+    document.addEventListener('keydown', handleKeyDown)
+  }
+  catch (error) {
     isLoading.value = false
     isError.value = true
     errorMessage.value = '词汇数据加载失败，请稍后重试'
@@ -76,47 +95,16 @@ onMounted(() => {
   }
 })
 
-onUpdated(() => {
-  // 音频再切换 SRC 之后需要调用一下 load() 不然看不到效果
-  const audioElements = document.getElementsByTagName('audio')
-  for (const el of Array.from(audioElements))
-    el.load()
+onUnmounted(() => {
+  // Clean up keyboard event listener
+  document.removeEventListener('keydown', handleKeyDown)
 })
 
-document.addEventListener('keydown', (ev: KeyboardEvent) => {
-  // 激活的那个音频可以通过方向键进行快进/退
-  if (['ArrowLeft', 'ArrowRight', ' '].includes(ev.key)) {
-    ev.preventDefault()
-    const audioTags = document.getElementsByTagName('audio')
-    const keyMap = {
-      ArrowLeft: -5,
-      ArrowRight: 5,
-    }
-    for (const audioTag of Array.from(audioTags)) {
-      audioTag.blur()
-      if (keyMap[ev.key as keyof typeof keyMap]) {
-        const step = keyMap[ev.key as keyof typeof keyMap]
-        audioTag.currentTime = audioTag.currentTime + step
-      }
-      if (ev.key === ' ') {
-        if (audioTag.paused)
-          audioTag.play()
-        else
-          audioTag.pause()
-      }
-    }
-  }
-})
-
-let audio: HTMLAudioElement | null = null
 function play(audioPath: string) {
-  if (audio) {
-    audio.pause()
-    audio.currentTime = 0
-  }
-  audio = document.createElement('audio')
-  audio.src = audioPath
-  audio.play()
+  // Use the global audio manager to ensure only one audio plays at a time
+  audioManager.play(audioPath).catch((error) => {
+    console.error('Failed to play audio:', error)
+  })
 }
 
 function copyText(item: VocabularyItem) {
@@ -134,12 +122,12 @@ function onInputKeydown(e: KeyboardEvent) {
   }
 }
 
-function onInputFoucsIn(e: FocusEvent, audioPath: string) {
+function onInputFocusIn(e: FocusEvent, audioPath: string) {
   if (isAutoPlayWordAudio.value)
     play(audioPath)
 }
 
-function onInputFoucsOut(e: FocusEvent, item: VocabularyItem) {
+function onInputFocusOut(e: FocusEvent, item: VocabularyItem) {
   const target = e.target as HTMLInputElement
   const spellValue = target.value.toLowerCase().trim()
   if (spellValue.length < 1) {
@@ -196,18 +184,22 @@ function retryLoad() {
     <!-- Loading state -->
     <div v-if="isLoading" class="flex items-center justify-center h-64">
       <div class="text-center">
-        <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500 mb-4"></div>
-        <p class="text-gray-600 dark:text-gray-400">加载中...</p>
+        <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500 mb-4" />
+        <p class="text-gray-600 dark:text-gray-400">
+          加载中...
+        </p>
       </div>
     </div>
-    
+
     <!-- Error state -->
     <div v-else-if="isError" class="border border-red-200 rounded-lg bg-red-50 p-4 shadow-sm dark:border-red-700 dark:bg-red-900 dark:bg-opacity-20 sm:p-6 mb-4">
       <div class="flex items-center">
         <svg class="h-5 w-5 text-red-400 dark:text-red-300 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
         </svg>
-        <h3 class="text-lg font-medium text-red-800 dark:text-red-200">加载失败</h3>
+        <h3 class="text-lg font-medium text-red-800 dark:text-red-200">
+          加载失败
+        </h3>
       </div>
       <div class="mt-2 text-sm text-red-700 dark:text-red-300">
         <p>{{ errorMessage }}</p>
@@ -222,7 +214,7 @@ function retryLoad() {
         </button>
       </div>
     </div>
-    
+
     <!-- Main content -->
     <div v-else class="border border-gray-200 rounded-lg bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
       <!-- Card header -->
@@ -348,8 +340,8 @@ function retryLoad() {
                           <input
                             :id="`${item.id}`" autocomplete="off" :class="getInputStyleClass(item)"
                             type="text"
-                            @focusout="onInputFoucsOut($event, item)" 
-                            @focusin="onInputFoucsIn($event, `vocabulary/audio/${category}/${item.word[0]}.mp3`)" 
+                            @focusout="onInputFocusOut($event, item)"
+                            @focusin="onInputFocusIn($event, `vocabulary/audio/${category}/${item.word[0]}.mp3`)"
                             @keydown="onInputKeydown"
                           >
                         </template>

@@ -7,7 +7,7 @@ export default [
     tips: [
       'Paraphrase the statement in your introduction',
       'Give a general overview of the main trends',
-      'Select and report the main features, and make comparisons where relevant'
+      'Select and report the main features, and make comparisons where relevant',
     ],
     sample: {
       title: 'Sample Answer',
@@ -17,8 +17,8 @@ In general, higher-income earners spent more on fast food than those with lower 
 
 Looking at the bar chart in more detail, people with the highest income level (over £30,000) spent approximately £40 per week on fast food, which was twice as much as those earning between £15,000 and £30,000. The lowest income group (less than £15,000) spent only £15 per week, which was the least amount among the three groups.
 
-As for the line graph, hamburger consumption rose steadily from around 60 grams per person in 1970 to about 120 grams in 1990. In contrast, the consumption of fish and chips declined dramatically over the same period, falling from approximately 200 grams to just 50 grams per person. Pizza consumption showed a gradual upward trend, increasing from almost zero in 1970 to around 30 grams per person by 1990.`
-    }
+As for the line graph, hamburger consumption rose steadily from around 60 grams per person in 1970 to about 120 grams in 1990. In contrast, the consumption of fish and chips declined dramatically over the same period, falling from approximately 200 grams to just 50 grams per person. Pizza consumption showed a gradual upward trend, increasing from almost zero in 1970 to around 30 grams per person by 1990.`,
+    },
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ As for the line graph, hamburger consumption rose steadily from around 60 grams 
     tips: [
       'Paraphrase the statement in your introduction',
       'Give a general overview of the main trends',
-      'Select and report the main features, and make comparisons where relevant'
+      'Select and report the main features, and make comparisons where relevant',
     ],
     sample: {
       title: 'Sample Answer',
@@ -38,8 +38,8 @@ Overall, there were significant changes in eating habits during this period, wit
 
 In 1979, beef was the most popular meat, with a consumption of around 220 grams per person per week, followed by lamb (150 grams) and chicken (nearly 100 grams). Fish consumption was about 50 grams per person per week.
 
-Over the next 25 years, chicken consumption rose dramatically to approximately 250 grams per person per week by 2004, making it the most consumed type of meat. In contrast, beef consumption gradually declined to about 120 grams by 2004, and lamb consumption also decreased to roughly 80 grams. Fish consumption showed little change, remaining at around 50 grams throughout the period.`
-    }
+Over the next 25 years, chicken consumption rose dramatically to approximately 250 grams per person per week by 2004, making it the most consumed type of meat. In contrast, beef consumption gradually declined to about 120 grams by 2004, and lamb consumption also decreased to roughly 80 grams. Fish consumption showed little change, remaining at around 50 grams throughout the period.`,
+    },
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ Over the next 25 years, chicken consumption rose dramatically to approximately 2
     tips: [
       'Paraphrase the statement in your introduction',
       'Give a general overview of the main trends',
-      'Select and report the main features, and make comparisons where relevant'
+      'Select and report the main features, and make comparisons where relevant',
     ],
     sample: {
       title: 'Sample Answer',
@@ -61,8 +61,8 @@ In 1990, Finland had the highest forest coverage at 72%, followed by New Zealand
 
 Between 1990 and 2015, New Zealand saw the most dramatic increase, with forest coverage rising to 35%. Chile also experienced growth, reaching 24% by 2015. In contrast, Australia's forest coverage decreased to 17%, and the USA's remained stable at 30%. Canada's forest coverage slightly declined to 36%, while Finland's remained unchanged at 72%.
 
-Looking at the projected figures for 2040, New Zealand is expected to maintain its current level of 35%. Chile is projected to reach 28%, while Australia's forest coverage is forecast to decline further to 15%. The USA and Canada are expected to maintain their current levels, and Finland's coverage will remain at 72%.`
-    }
+Looking at the projected figures for 2040, New Zealand is expected to maintain its current level of 35%. Chile is projected to reach 28%, while Australia's forest coverage is forecast to decline further to 15%. The USA and Canada are expected to maintain their current levels, and Finland's coverage will remain at 72%.`,
+    },
   },
   {
     id: 4,
@@ -72,7 +72,7 @@ Looking at the projected figures for 2040, New Zealand is expected to maintain i
     tips: [
       'Paraphrase the statement in your introduction',
       'Give a general overview of the main trends',
-      'Select and report the main features, and make comparisons where relevant'
+      'Select and report the main features, and make comparisons where relevant',
     ],
     sample: {
       title: 'Sample Answer',
@@ -84,8 +84,8 @@ In Germany, housing takes up the largest share of expenditure at 33%, followed b
 
 In Turkey, the pattern is quite different. Food accounts for the largest proportion of spending at 36%, followed by housing (25%) and transport (14%). Utilities take up 10% of the budget, while healthcare, entertainment, and clothing each account for 5%. The remaining 5% is allocated to other expenses.
 
-The main difference between the two countries is in food expenditure, which is more than double in Turkey compared to Germany. Housing costs are also higher in Germany, while transport costs are similar in both countries.`
-    }
+The main difference between the two countries is in food expenditure, which is more than double in Turkey compared to Germany. Housing costs are also higher in Germany, while transport costs are similar in both countries.`,
+    },
   },
   {
     id: 5,
@@ -97,7 +97,7 @@ The main difference between the two countries is in food expenditure, which is m
       'Give your opinion clearly in the introduction or conclusion',
       'Develop each point in a separate paragraph',
       'Support your ideas with reasons and examples',
-      'Summarize your opinion in the conclusion'
+      'Summarize your opinion in the conclusion',
     ],
     sample: {
       title: 'Sample Answer',
@@ -109,8 +109,8 @@ On the other hand, supporters of rural living emphasize the benefits of a quiete
 
 However, rural living also has its drawbacks. Job opportunities may be limited, particularly in specialized fields. Access to quality healthcare and educational facilities can be challenging, often requiring long commutes to urban centers. Entertainment options are usually limited, and public transportation may be inadequate or nonexistent.
 
-In conclusion, both urban and rural living have their merits and drawbacks. City life offers convenience, opportunities, and cultural richness, while countryside living provides peace, natural beauty, and a sense of community. The best choice depends on individual priorities, career needs, and lifestyle preferences.`
-    }
+In conclusion, both urban and rural living have their merits and drawbacks. City life offers convenience, opportunities, and cultural richness, while countryside living provides peace, natural beauty, and a sense of community. The best choice depends on individual priorities, career needs, and lifestyle preferences.`,
+    },
   },
   {
     id: 6,
@@ -122,7 +122,7 @@ In conclusion, both urban and rural living have their merits and drawbacks. City
       'State whether you think this is a positive or negative development',
       'Develop each point in a separate paragraph',
       'Support your ideas with reasons and examples',
-      'Summarize your opinion in the conclusion'
+      'Summarize your opinion in the conclusion',
     ],
     sample: {
       title: 'Sample Answer',
@@ -136,8 +136,8 @@ However, there are also negative aspects to consider. Living alone can be expens
 
 Despite these drawbacks, I believe that the benefits of living alone outweigh the disadvantages. The trend reflects positive changes in society, including greater gender equality, as women now have more opportunities to pursue careers and independent lifestyles. It also reflects changing family structures and the increasing acceptance of diverse living arrangements. Moreover, advances in technology have made it easier for people to maintain social connections even when living alone, through social media, video calls, and online communities.
 
-In conclusion, while living alone has both positive and negative aspects, I view the increasing trend as a positive development that reflects greater individual freedom and changing social values. With proper financial planning and efforts to maintain social connections, the benefits of independent living can be fully realized.`
-    }
+In conclusion, while living alone has both positive and negative aspects, I view the increasing trend as a positive development that reflects greater individual freedom and changing social values. With proper financial planning and efforts to maintain social connections, the benefits of independent living can be fully realized.`,
+    },
   },
   {
     id: 7,
@@ -149,7 +149,7 @@ In conclusion, while living alone has both positive and negative aspects, I view
       'Clearly state the problems and solutions',
       'Develop each point in a separate paragraph',
       'Support your ideas with reasons and examples',
-      'Summarize your opinion in the conclusion'
+      'Summarize your opinion in the conclusion',
     ],
     sample: {
       title: 'Sample Answer',
@@ -167,8 +167,8 @@ Third, the food industry itself should take responsibility by offering healthier
 
 Finally, individuals and families can play a role by making conscious efforts to prepare and consume traditional meals at home. This not only promotes better health but also preserves cultural traditions and strengthens family bonds.
 
-In conclusion, the replacement of traditional foods with international fast foods has serious negative consequences for health, culture, and social relationships. However, through coordinated efforts by governments, the food industry, and individuals, it is possible to reverse this trend and promote a return to healthier, more culturally diverse eating habits.`
-    }
+In conclusion, the replacement of traditional foods with international fast foods has serious negative consequences for health, culture, and social relationships. However, through coordinated efforts by governments, the food industry, and individuals, it is possible to reverse this trend and promote a return to healthier, more culturally diverse eating habits.`,
+    },
   },
   {
     id: 8,
@@ -180,7 +180,7 @@ In conclusion, the replacement of traditional foods with international fast food
       'Clearly state your opinion',
       'Develop each point in a separate paragraph',
       'Support your ideas with reasons and examples',
-      'Summarize your opinion in the conclusion'
+      'Summarize your opinion in the conclusion',
     ],
     sample: {
       title: 'Sample Answer',
@@ -196,7 +196,7 @@ Furthermore, the internet provides unprecedented access to information and readi
 
 Additionally, digital tools offer new forms of creative expression and collaboration. Young people can create multimedia content, participate in online writing communities, and receive immediate feedback on their work. These experiences can foster creativity and motivation to improve writing skills.
 
-In conclusion, while the increasing use of computers and mobile phones for communication does pose some risks to young people's reading and writing abilities, particularly in terms of informal language use, the overall impact is more positive than negative. The key is to ensure that young people are taught to distinguish between appropriate and inappropriate language contexts and are encouraged to engage with both digital and traditional forms of reading and writing. With proper guidance and balance, digital communication tools can enhance rather than hinder literacy development.`
-    }
-  }
+In conclusion, while the increasing use of computers and mobile phones for communication does pose some risks to young people's reading and writing abilities, particularly in terms of informal language use, the overall impact is more positive than negative. The key is to ensure that young people are taught to distinguish between appropriate and inappropriate language contexts and are encouraged to engage with both digital and traditional forms of reading and writing. With proper guidance and balance, digital communication tools can enhance rather than hinder literacy development.`,
+    },
+  },
 ]

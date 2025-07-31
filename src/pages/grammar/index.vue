@@ -12,7 +12,7 @@
       <h3 class="mb-4 text-xl font-semibold dark:text-white">
         视频
       </h3>
-      <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=438241809&bvid=BV1Qj411u7cY&cid=1046755185&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;aspect-ratio:16/9;" class="mb-2 rounded-lg shadow"></iframe>
+      <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=438241809&bvid=BV1Qj411u7cY&cid=1046755185&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;aspect-ratio:16/9;" class="mb-2 rounded-lg shadow" />
       <blockquote class="mb-6 px-4 py-2 border-l-4 border-blue-400 bg-blue-50 dark:bg-gray-700 text-blue-800 dark:text-blue-200 text-sm italic">
         系列视频自己找资源吧
       </blockquote>
@@ -31,8 +31,10 @@
         思维导图
       </h3>
       <div class="mb-4">
-        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">听完课跟着老师画的，使用的百度脑图</p>
-        <img src="/grammar/grammar-mindmap.svg" alt="语法脑图" style="width:100%;max-width:100%;height:auto;display:block; border-radius:0.5rem; box-shadow:0 2px 8px 0 rgba(0,0,0,0.06); background:#fff;" loading="lazy" />
+        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+          听完课跟着老师画的，使用的百度脑图
+        </p>
+        <img src="/grammar/grammar-mindmap.svg" alt="语法脑图" style="width:100%;max-width:100%;height:auto;display:block; border-radius:0.5rem; box-shadow:0 2px 8px 0 rgba(0,0,0,0.06); background:#fff;" loading="lazy">
       </div>
     </div>
   </div>

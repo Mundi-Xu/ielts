@@ -1,8 +1,14 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import { ref, reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { toggleDark } from '~/composables/dark'
 
-const menus = reactive([
+interface MenuItem {
+  label: string
+  icon: string
+  link: string
+}
+
+const menus = reactive<MenuItem[]>([
   {
     label: '首页',
     icon: 'i-carbon-home',
@@ -15,7 +21,7 @@ const menus = reactive([
   },
   {
     label: '语法',
-    icon: 'i-carbon-load-balancer-vpc ',
+    icon: 'i-carbon-load-balancer-vpc',
     link: '/grammar',
   },
   {
@@ -94,11 +100,11 @@ const showMobileMenu = ref(false)
     </nav>
     <nav class="bg-white dark:bg-gray-900">
       <!-- Mobile menu -->
-      <div 
-        v-show="showMobileMenu" 
+      <div
+        v-show="showMobileMenu"
         class="lg:hidden fixed inset-0 z-20 bg-black bg-opacity-50 transition-opacity"
         @click="showMobileMenu = false"
-      ></div>
+      />
       <ul
         v-show="showMobileMenu"
         style="display: none"
